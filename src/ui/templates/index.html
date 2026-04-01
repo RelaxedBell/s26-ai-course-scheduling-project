@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UVA Course Scheduler</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+    <header>
+        <h1>UVA AI Course Scheduler</h1>
+        <p>Powered by Naive Bayes, Neural Networks, and LLM</p>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Left Panel: Input -->
+            <div class="panel input-panel">
+                <!-- Step 1: Transcript -->
+                <section id="transcript-section">
+                    <h2>1. Your Transcript</h2>
+                    <p>Select courses you've completed:</p>
+                    <div class="course-checklist" id="course-checklist">
+                        {% for course in courses %}
+                        <label class="course-item" data-type="{{ course.type }}">
+                            <input type="checkbox" value="{{ course.code }}" class="course-checkbox">
+                            <span class="course-code">{{ course.code }}</span>
+                            <span class="course-name">{{ course.name }}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+                    <button onclick="submitTranscript()" class="btn btn-primary">
+                        Check Requirements
+                    </button>
+                    <div id="audit-result" class="result-box"></div>
+                </section>
+
+                <!-- Step 2: Preferences -->
+                <section id="preferences-section">
+                    <h2>2. Your Preferences</h2>
+
+                    <div class="tabs">
+                        <button class="tab active" onclick="switchTab('form')">Form</button>
+                        <button class="tab" onclick="switchTab('chat')">Chat</button>
+                    </div>
+
+                    <!-- Form-based input -->
+                    <div id="form-tab" class="tab-content active">
+                        <div class="form-group">
+                            <label>Difficulty Preference</label>
+                            <input type="range" id="difficulty" min="1" max="5" value="3">
+                            <span id="difficulty-label">Moderate</span>
+                        </div>
+                        <div class="form-group">
+                            <label>Credit Range</label>
+                            <input type="number" id="min-credits" value="12" min="3" max="21"> -
+                            <input type="number" id="max-credits" value="15" min="3" max="21">
+                        </div>
+                        <div class="form-group">
+                            <label>Preferred Topics</label>
+                            <div class="topic-chips">
+                                <label class="chip"><input type="checkbox" value="AI"> AI</label>
+                                <label class="chip"><input type="checkbox" value="systems"> Systems</label>
+                                <label class="chip"><input type="checkbox" value="security"> Security</label>
+                                <label class="chip"><input type="checkbox" value="data"> Data</label>
+                                <label class="chip"><input type="checkbox" value="theory"> Theory</label>
+                                <label class="chip"><input type="checkbox" value="software"> Software Eng</label>
+                                <label class="chip"><input type="checkbox" value="graphics"> Graphics</label>
+                                <label class="chip"><input type="checkbox" value="web"> Web</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="prefer-morning"> Prefer morning classes
+                            </label>
+                        </div>
+                        <button onclick="generateSchedules()" class="btn btn-primary">
+                            Generate Schedules
+                        </button>
+                    </div>
+
+                    <!-- Chat-based input -->
+                    <div id="chat-tab" class="tab-content">
+                        <div id="chat-messages" class="chat-messages"></div>
+                        <div class="chat-input-row">
+                            <input type="text" id="chat-input" placeholder="Tell me about your ideal schedule..."
+                                   onkeydown="if(event.key==='Enter') sendChat()">
+                            <button onclick="sendChat()" class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Panel: Results -->
+            <div class="panel results-panel">
+                <h2>Generated Schedules</h2>
+                <div id="schedules-container">
+                    <p class="placeholder">Complete steps 1 and 2 to generate schedules.</p>
+                </div>
+
+                <div id="explanation-container" class="result-box" style="display:none;">
+                    <h3>Schedule Explanation</h3>
+                    <div id="explanation-text"></div>
+                </div>
+
+                <div id="rating-container" style="display:none;">
+                    <h3>Rate this Schedule</h3>
+                    <div class="rating-stars">
+                        <input type="range" id="rating-slider" min="1" max="10" value="7">
+                        <span id="rating-value">7</span>/10
+                    </div>
+                    <button onclick="submitRating()" class="btn">Submit Rating</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

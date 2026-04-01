@@ -1,0 +1,4867 @@
+[
+  {
+    "course_code": "CS 1110",
+    "section_id": "CS1110-001",
+    "instructor": "Dr. Garcia",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 217",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 26
+  },
+  {
+    "course_code": "CS 1110",
+    "section_id": "CS1110-002",
+    "instructor": "Dr. Johnson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "14:00",
+    "end_time": "15:15",
+    "location": "Rice 133",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 27
+  },
+  {
+    "course_code": "CS 1110",
+    "section_id": "CS1110-003",
+    "instructor": "Dr. Martinez",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 355",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 25
+  },
+  {
+    "course_code": "CS 1111",
+    "section_id": "CS1111-001",
+    "instructor": "Dr. Davis",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 306",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 7
+  },
+  {
+    "course_code": "CS 1112",
+    "section_id": "CS1112-001",
+    "instructor": "Dr. Harris",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 112",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 42
+  },
+  {
+    "course_code": "CS 1112",
+    "section_id": "CS1112-002",
+    "instructor": "Dr. Miller",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "13:00",
+    "end_time": "13:50",
+    "location": "Rice 242",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 22
+  },
+  {
+    "course_code": "CS 1113",
+    "section_id": "CS1113-001",
+    "instructor": "Dr. Martin",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 114",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 99
+  },
+  {
+    "course_code": "CS 1113",
+    "section_id": "CS1113-002",
+    "instructor": "Dr. Anderson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "14:00",
+    "end_time": "15:15",
+    "location": "Rice 339",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 8
+  },
+  {
+    "course_code": "CS 2100",
+    "section_id": "CS2100-001",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 394",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 43
+  },
+  {
+    "course_code": "CS 2100",
+    "section_id": "CS2100-002",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 224",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 6
+  },
+  {
+    "course_code": "CS 2120",
+    "section_id": "CS2120-001",
+    "instructor": "Dr. Wilson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 367",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 24
+  },
+  {
+    "course_code": "CS 2130",
+    "section_id": "CS2130-001",
+    "instructor": "Dr. Anderson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "17:00",
+    "end_time": "18:15",
+    "location": "Rice 297",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 42
+  },
+  {
+    "course_code": "CS 3100",
+    "section_id": "CS3100-001",
+    "instructor": "Dr. Harris",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 347",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 27
+  },
+  {
+    "course_code": "CS 3100",
+    "section_id": "CS3100-002",
+    "instructor": "Dr. Wilson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 251",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 2
+  },
+  {
+    "course_code": "CS 3100",
+    "section_id": "CS3100-003",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 246",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 198
+  },
+  {
+    "course_code": "CS 3120",
+    "section_id": "CS3120-001",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 146",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 169
+  },
+  {
+    "course_code": "CS 3130",
+    "section_id": "CS3130-001",
+    "instructor": "Dr. White",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 384",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 3
+  },
+  {
+    "course_code": "CS 3140",
+    "section_id": "CS3140-001",
+    "instructor": "Dr. Moore",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "11:00",
+    "end_time": "11:50",
+    "location": "Rice 190",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 40
+  },
+  {
+    "course_code": "CS 3140",
+    "section_id": "CS3140-002",
+    "instructor": "Dr. Martin",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 261",
+    "semester": "Fall 2026",
+    "enrollment_cap": 100,
+    "enrollment_current": 19
+  },
+  {
+    "course_code": "CS 3205",
+    "section_id": "CS3205-001",
+    "instructor": "Dr. Johnson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 340",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 28
+  },
+  {
+    "course_code": "CS 3205",
+    "section_id": "CS3205-002",
+    "instructor": "Dr. Robinson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 231",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 6
+  },
+  {
+    "course_code": "CS 3240",
+    "section_id": "CS3240-001",
+    "instructor": "Dr. Moore",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 304",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 112
+  },
+  {
+    "course_code": "CS 3240",
+    "section_id": "CS3240-002",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "11:00",
+    "end_time": "11:50",
+    "location": "Rice 354",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 94
+  },
+  {
+    "course_code": "CS 3240",
+    "section_id": "CS3240-003",
+    "instructor": "Dr. Thompson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 140",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 110
+  },
+  {
+    "course_code": "CS 3250",
+    "section_id": "CS3250-001",
+    "instructor": "Dr. Harris",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "15:30",
+    "end_time": "16:45",
+    "location": "Rice 144",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 4
+  },
+  {
+    "course_code": "CS 3250",
+    "section_id": "CS3250-002",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 309",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 147
+  },
+  {
+    "course_code": "CS 3250",
+    "section_id": "CS3250-003",
+    "instructor": "Dr. Williams",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 330",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 29
+  },
+  {
+    "course_code": "CS 3501",
+    "section_id": "CS3501-001",
+    "instructor": "Dr. Miller",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "14:00",
+    "end_time": "15:15",
+    "location": "Rice 123",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 1
+  },
+  {
+    "course_code": "CS 3501",
+    "section_id": "CS3501-002",
+    "instructor": "Dr. Jones",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "14:00",
+    "end_time": "15:15",
+    "location": "Rice 176",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 155
+  },
+  {
+    "course_code": "CS 3710",
+    "section_id": "CS3710-001",
+    "instructor": "Dr. Brown",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 276",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 37
+  },
+  {
+    "course_code": "CS 3710",
+    "section_id": "CS3710-002",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 326",
+    "semester": "Fall 2026",
+    "enrollment_cap": 100,
+    "enrollment_current": 83
+  },
+  {
+    "course_code": "CS 3710",
+    "section_id": "CS3710-003",
+    "instructor": "Dr. Moore",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 375",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 17
+  },
+  {
+    "course_code": "CS 4260",
+    "section_id": "CS4260-001",
+    "instructor": "Dr. Wilson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "15:30",
+    "end_time": "16:45",
+    "location": "Rice 369",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 28
+  },
+  {
+    "course_code": "CS 4260",
+    "section_id": "CS4260-002",
+    "instructor": "Dr. Thompson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "09:30",
+    "end_time": "10:45",
+    "location": "Rice 131",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 35
+  },
+  {
+    "course_code": "CS 4330",
+    "section_id": "CS4330-001",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "17:00",
+    "end_time": "18:15",
+    "location": "Rice 311",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 19
+  },
+  {
+    "course_code": "CS 4330",
+    "section_id": "CS4330-002",
+    "instructor": "Dr. Moore",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "11:00",
+    "end_time": "11:50",
+    "location": "Rice 384",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 126
+  },
+  {
+    "course_code": "CS 4414",
+    "section_id": "CS4414-001",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 233",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 46
+  },
+  {
+    "course_code": "CS 4414",
+    "section_id": "CS4414-002",
+    "instructor": "Dr. Thompson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "14:00",
+    "end_time": "15:15",
+    "location": "Rice 340",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 20
+  },
+  {
+    "course_code": "CS 4414",
+    "section_id": "CS4414-003",
+    "instructor": "Dr. Miller",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 388",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 27
+  },
+  {
+    "course_code": "CS 4434",
+    "section_id": "CS4434-001",
+    "instructor": "Dr. Garcia",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 261",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 1
+  },
+  {
+    "course_code": "CS 4434",
+    "section_id": "CS4434-002",
+    "instructor": "Dr. Miller",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 253",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 10
+  },
+  {
+    "course_code": "CS 4434",
+    "section_id": "CS4434-003",
+    "instructor": "Dr. Martinez",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 296",
+    "semester": "Fall 2026",
+    "enrollment_cap": 100,
+    "enrollment_current": 96
+  },
+  {
+    "course_code": "CS 4444",
+    "section_id": "CS4444-001",
+    "instructor": "Dr. Harris",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "13:00",
+    "end_time": "13:50",
+    "location": "Rice 302",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 10
+  },
+  {
+    "course_code": "CS 4444",
+    "section_id": "CS4444-002",
+    "instructor": "Dr. Robinson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 271",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 110
+  },
+  {
+    "course_code": "CS 4457",
+    "section_id": "CS4457-001",
+    "instructor": "Dr. Brown",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 172",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 22
+  },
+  {
+    "course_code": "CS 4457",
+    "section_id": "CS4457-002",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 278",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 121
+  },
+  {
+    "course_code": "CS 4457",
+    "section_id": "CS4457-003",
+    "instructor": "Dr. Brown",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 134",
+    "semester": "Fall 2026",
+    "enrollment_cap": 100,
+    "enrollment_current": 38
+  },
+  {
+    "course_code": "CS 4457",
+    "section_id": "CS4457-004",
+    "instructor": "Dr. Johnson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "09:30",
+    "end_time": "10:45",
+    "location": "Rice 275",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 20
+  },
+  {
+    "course_code": "CS 4501",
+    "section_id": "CS4501-001",
+    "instructor": "Dr. Martin",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 309",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 175
+  },
+  {
+    "course_code": "CS 4610",
+    "section_id": "CS4610-001",
+    "instructor": "Dr. Williams",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 325",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 22
+  },
+  {
+    "course_code": "CS 4610",
+    "section_id": "CS4610-002",
+    "instructor": "Dr. Miller",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 326",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 55
+  },
+  {
+    "course_code": "CS 4620",
+    "section_id": "CS4620-001",
+    "instructor": "Dr. Williams",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 374",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 20
+  },
+  {
+    "course_code": "CS 4620",
+    "section_id": "CS4620-002",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 323",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 30
+  },
+  {
+    "course_code": "CS 4620",
+    "section_id": "CS4620-003",
+    "instructor": "Dr. Johnson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 332",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 39
+  },
+  {
+    "course_code": "CS 4630",
+    "section_id": "CS4630-001",
+    "instructor": "Dr. Anderson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 139",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 73
+  },
+  {
+    "course_code": "CS 4630",
+    "section_id": "CS4630-002",
+    "instructor": "Dr. Thomas",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 214",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 33
+  },
+  {
+    "course_code": "CS 4640",
+    "section_id": "CS4640-001",
+    "instructor": "Dr. Williams",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "11:00",
+    "end_time": "11:50",
+    "location": "Rice 138",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 145
+  },
+  {
+    "course_code": "CS 4640",
+    "section_id": "CS4640-002",
+    "instructor": "Dr. Johnson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "11:00",
+    "end_time": "11:50",
+    "location": "Rice 249",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 16
+  },
+  {
+    "course_code": "CS 4640",
+    "section_id": "CS4640-003",
+    "instructor": "Dr. Anderson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "14:00",
+    "end_time": "15:15",
+    "location": "Rice 262",
+    "semester": "Fall 2026",
+    "enrollment_cap": 100,
+    "enrollment_current": 57
+  },
+  {
+    "course_code": "CS 4640",
+    "section_id": "CS4640-004",
+    "instructor": "Dr. Moore",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 399",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 6
+  },
+  {
+    "course_code": "CS 4710",
+    "section_id": "CS4710-001",
+    "instructor": "Dr. Robinson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 355",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 52
+  },
+  {
+    "course_code": "CS 4720",
+    "section_id": "CS4720-001",
+    "instructor": "Dr. Robinson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "14:00",
+    "end_time": "15:15",
+    "location": "Rice 320",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 30
+  },
+  {
+    "course_code": "CS 4720",
+    "section_id": "CS4720-002",
+    "instructor": "Dr. Davis",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "14:00",
+    "end_time": "15:15",
+    "location": "Rice 127",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 6
+  },
+  {
+    "course_code": "CS 4720",
+    "section_id": "CS4720-003",
+    "instructor": "Dr. Anderson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 383",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 138
+  },
+  {
+    "course_code": "CS 4730",
+    "section_id": "CS4730-001",
+    "instructor": "Dr. Johnson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 305",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 2
+  },
+  {
+    "course_code": "CS 4730",
+    "section_id": "CS4730-002",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 125",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 47
+  },
+  {
+    "course_code": "CS 4730",
+    "section_id": "CS4730-003",
+    "instructor": "Dr. Martin",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 272",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 26
+  },
+  {
+    "course_code": "CS 4730",
+    "section_id": "CS4730-004",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 216",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 8
+  },
+  {
+    "course_code": "CS 4740",
+    "section_id": "CS4740-001",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "15:30",
+    "end_time": "16:45",
+    "location": "Rice 275",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 46
+  },
+  {
+    "course_code": "CS 4740",
+    "section_id": "CS4740-002",
+    "instructor": "Dr. Wilson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "17:00",
+    "end_time": "18:15",
+    "location": "Rice 283",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 129
+  },
+  {
+    "course_code": "CS 4740",
+    "section_id": "CS4740-003",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "17:00",
+    "end_time": "18:15",
+    "location": "Rice 250",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 6
+  },
+  {
+    "course_code": "CS 4740",
+    "section_id": "CS4740-004",
+    "instructor": "Dr. Martin",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "13:00",
+    "end_time": "13:50",
+    "location": "Rice 271",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 41
+  },
+  {
+    "course_code": "CS 4750",
+    "section_id": "CS4750-001",
+    "instructor": "Dr. Smith",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "15:30",
+    "end_time": "16:45",
+    "location": "Rice 109",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 43
+  },
+  {
+    "course_code": "CS 4750",
+    "section_id": "CS4750-002",
+    "instructor": "Dr. Smith",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 276",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 19
+  },
+  {
+    "course_code": "CS 4750",
+    "section_id": "CS4750-003",
+    "instructor": "Dr. Jones",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "13:00",
+    "end_time": "13:50",
+    "location": "Rice 133",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 2
+  },
+  {
+    "course_code": "CS 4760",
+    "section_id": "CS4760-001",
+    "instructor": "Dr. Davis",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 153",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 26
+  },
+  {
+    "course_code": "CS 4760",
+    "section_id": "CS4760-002",
+    "instructor": "Dr. Martinez",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 294",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 49
+  },
+  {
+    "course_code": "CS 4760",
+    "section_id": "CS4760-003",
+    "instructor": "Dr. Thomas",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "17:00",
+    "end_time": "18:15",
+    "location": "Rice 347",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 31
+  },
+  {
+    "course_code": "CS 4760",
+    "section_id": "CS4760-004",
+    "instructor": "Dr. Brown",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "14:00",
+    "end_time": "15:15",
+    "location": "Rice 132",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 8
+  },
+  {
+    "course_code": "CS 4770",
+    "section_id": "CS4770-001",
+    "instructor": "Dr. Garcia",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 248",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 43
+  },
+  {
+    "course_code": "CS 4770",
+    "section_id": "CS4770-002",
+    "instructor": "Dr. Thomas",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 357",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 34
+  },
+  {
+    "course_code": "CS 4770",
+    "section_id": "CS4770-003",
+    "instructor": "Dr. Anderson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 398",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 146
+  },
+  {
+    "course_code": "CS 4771",
+    "section_id": "CS4771-001",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 261",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 4
+  },
+  {
+    "course_code": "CS 4771",
+    "section_id": "CS4771-002",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "15:30",
+    "end_time": "16:45",
+    "location": "Rice 132",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 24
+  },
+  {
+    "course_code": "CS 4771",
+    "section_id": "CS4771-003",
+    "instructor": "Dr. Martinez",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 357",
+    "semester": "Fall 2026",
+    "enrollment_cap": 100,
+    "enrollment_current": 13
+  },
+  {
+    "course_code": "CS 4771",
+    "section_id": "CS4771-004",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 244",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 28
+  },
+  {
+    "course_code": "CS 4774",
+    "section_id": "CS4774-001",
+    "instructor": "Dr. Thompson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 396",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 69
+  },
+  {
+    "course_code": "CS 4790",
+    "section_id": "CS4790-001",
+    "instructor": "Dr. Williams",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "11:00",
+    "end_time": "11:50",
+    "location": "Rice 320",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 16
+  },
+  {
+    "course_code": "CS 4810",
+    "section_id": "CS4810-001",
+    "instructor": "Dr. Williams",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 383",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 11
+  },
+  {
+    "course_code": "CS 4810",
+    "section_id": "CS4810-002",
+    "instructor": "Dr. Martin",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 193",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 24
+  },
+  {
+    "course_code": "CS 4810",
+    "section_id": "CS4810-003",
+    "instructor": "Dr. Martin",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 235",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 13
+  },
+  {
+    "course_code": "CS 4993",
+    "section_id": "CS4993-001",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 140",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 97
+  },
+  {
+    "course_code": "CS 4993",
+    "section_id": "CS4993-002",
+    "instructor": "Dr. Robinson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "11:00",
+    "end_time": "11:50",
+    "location": "Rice 272",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 26
+  },
+  {
+    "course_code": "CS 4998",
+    "section_id": "CS4998-001",
+    "instructor": "Dr. Moore",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "09:30",
+    "end_time": "10:45",
+    "location": "Rice 192",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 49
+  },
+  {
+    "course_code": "ANTH 3490",
+    "section_id": "ANTH3490-001",
+    "instructor": "Dr. Jones",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 154",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 31
+  },
+  {
+    "course_code": "ARTS 2220",
+    "section_id": "ARTS2220-001",
+    "instructor": "Dr. Brown",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 170",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 16
+  },
+  {
+    "course_code": "ARTS 2220",
+    "section_id": "ARTS2220-002",
+    "instructor": "Dr. Thomas",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 231",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 51
+  },
+  {
+    "course_code": "ARTS 2222",
+    "section_id": "ARTS2222-001",
+    "instructor": "Dr. Moore",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "13:00",
+    "end_time": "13:50",
+    "location": "Rice 238",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 3
+  },
+  {
+    "course_code": "ARTS 3220",
+    "section_id": "ARTS3220-001",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 185",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 108
+  },
+  {
+    "course_code": "ARTS 3220",
+    "section_id": "ARTS3220-002",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "09:30",
+    "end_time": "10:45",
+    "location": "Rice 337",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 41
+  },
+  {
+    "course_code": "ARTS 3220",
+    "section_id": "ARTS3220-003",
+    "instructor": "Dr. Harris",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 399",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 44
+  },
+  {
+    "course_code": "ARTS 3220",
+    "section_id": "ARTS3220-004",
+    "instructor": "Dr. Garcia",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 330",
+    "semester": "Fall 2026",
+    "enrollment_cap": 100,
+    "enrollment_current": 3
+  },
+  {
+    "course_code": "ARTS 3222",
+    "section_id": "ARTS3222-001",
+    "instructor": "Dr. Garcia",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 162",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 44
+  },
+  {
+    "course_code": "ARTS 3222",
+    "section_id": "ARTS3222-002",
+    "instructor": "Dr. Moore",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 207",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 39
+  },
+  {
+    "course_code": "ARTS 3222",
+    "section_id": "ARTS3222-003",
+    "instructor": "Dr. Johnson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 247",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 109
+  },
+  {
+    "course_code": "ARTS 3222",
+    "section_id": "ARTS3222-004",
+    "instructor": "Dr. Robinson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 166",
+    "semester": "Fall 2026",
+    "enrollment_cap": 100,
+    "enrollment_current": 78
+  },
+  {
+    "course_code": "ARTS 4220",
+    "section_id": "ARTS4220-001",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 338",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 36
+  },
+  {
+    "course_code": "ARTS 4220",
+    "section_id": "ARTS4220-002",
+    "instructor": "Dr. Jones",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 333",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 19
+  },
+  {
+    "course_code": "ARTS 4220",
+    "section_id": "ARTS4220-003",
+    "instructor": "Dr. Harris",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 232",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 23
+  },
+  {
+    "course_code": "ARTS 4222",
+    "section_id": "ARTS4222-001",
+    "instructor": "Dr. Johnson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 397",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 30
+  },
+  {
+    "course_code": "DRAM 2110",
+    "section_id": "DRAM2110-001",
+    "instructor": "Dr. Williams",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "15:30",
+    "end_time": "16:45",
+    "location": "Rice 353",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 48
+  },
+  {
+    "course_code": "DRAM 2110",
+    "section_id": "DRAM2110-002",
+    "instructor": "Dr. White",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 185",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 53
+  },
+  {
+    "course_code": "DRAM 2110",
+    "section_id": "DRAM2110-003",
+    "instructor": "Dr. Martinez",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 235",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 24
+  },
+  {
+    "course_code": "DRAM 2210",
+    "section_id": "DRAM2210-001",
+    "instructor": "Dr. Davis",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 332",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 17
+  },
+  {
+    "course_code": "DRAM 2620",
+    "section_id": "DRAM2620-001",
+    "instructor": "Dr. Martinez",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 180",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 4
+  },
+  {
+    "course_code": "DRAM 2620",
+    "section_id": "DRAM2620-002",
+    "instructor": "Dr. Martin",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 145",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 45
+  },
+  {
+    "course_code": "DRAM 3820",
+    "section_id": "DRAM3820-001",
+    "instructor": "Dr. Wilson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 176",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 58
+  },
+  {
+    "course_code": "DRAM 3820",
+    "section_id": "DRAM3820-002",
+    "instructor": "Dr. Martinez",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "14:00",
+    "end_time": "15:15",
+    "location": "Rice 120",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 15
+  },
+  {
+    "course_code": "DRAM 3820",
+    "section_id": "DRAM3820-003",
+    "instructor": "Dr. Thompson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 150",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 115
+  },
+  {
+    "course_code": "DRAM 3820",
+    "section_id": "DRAM3820-004",
+    "instructor": "Dr. Martin",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 211",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 33
+  },
+  {
+    "course_code": "DRAM 3825",
+    "section_id": "DRAM3825-001",
+    "instructor": "Dr. Wilson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 325",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 16
+  },
+  {
+    "course_code": "DRAM 3825",
+    "section_id": "DRAM3825-002",
+    "instructor": "Dr. Thomas",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 276",
+    "semester": "Fall 2026",
+    "enrollment_cap": 100,
+    "enrollment_current": 18
+  },
+  {
+    "course_code": "DRAM 4110",
+    "section_id": "DRAM4110-001",
+    "instructor": "Dr. Thomas",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 183",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 74
+  },
+  {
+    "course_code": "ECON 3720",
+    "section_id": "ECON3720-001",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 367",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 48
+  },
+  {
+    "course_code": "ECON 3720",
+    "section_id": "ECON3720-002",
+    "instructor": "Dr. Anderson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "13:00",
+    "end_time": "13:50",
+    "location": "Rice 160",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 7
+  },
+  {
+    "course_code": "ECON 3720",
+    "section_id": "ECON3720-003",
+    "instructor": "Dr. Jones",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 257",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 8
+  },
+  {
+    "course_code": "ECON 4010",
+    "section_id": "ECON4010-001",
+    "instructor": "Dr. Davis",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 302",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 28
+  },
+  {
+    "course_code": "ECON 4010",
+    "section_id": "ECON4010-002",
+    "instructor": "Dr. Thompson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "09:30",
+    "end_time": "10:45",
+    "location": "Rice 173",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 25
+  },
+  {
+    "course_code": "ECON 4010",
+    "section_id": "ECON4010-003",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "09:30",
+    "end_time": "10:45",
+    "location": "Rice 133",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 23
+  },
+  {
+    "course_code": "ECON 4020",
+    "section_id": "ECON4020-001",
+    "instructor": "Dr. Thomas",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 220",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 41
+  },
+  {
+    "course_code": "ECON 4020",
+    "section_id": "ECON4020-002",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 158",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 43
+  },
+  {
+    "course_code": "ECON 4020",
+    "section_id": "ECON4020-003",
+    "instructor": "Dr. Davis",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 335",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 21
+  },
+  {
+    "course_code": "ECON 4020",
+    "section_id": "ECON4020-004",
+    "instructor": "Dr. White",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 110",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 60
+  },
+  {
+    "course_code": "ECON 4030",
+    "section_id": "ECON4030-001",
+    "instructor": "Dr. Smith",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "15:30",
+    "end_time": "16:45",
+    "location": "Rice 395",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 31
+  },
+  {
+    "course_code": "ECON 4030",
+    "section_id": "ECON4030-002",
+    "instructor": "Dr. Miller",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "17:00",
+    "end_time": "18:15",
+    "location": "Rice 237",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 163
+  },
+  {
+    "course_code": "ECON 4444",
+    "section_id": "ECON4444-001",
+    "instructor": "Dr. Miller",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 156",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 10
+  },
+  {
+    "course_code": "ECON 4444",
+    "section_id": "ECON4444-002",
+    "instructor": "Dr. Wilson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "11:00",
+    "end_time": "11:50",
+    "location": "Rice 263",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 115
+  },
+  {
+    "course_code": "ECON 4444",
+    "section_id": "ECON4444-003",
+    "instructor": "Dr. Martin",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 188",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 75
+  },
+  {
+    "course_code": "ECON 4444",
+    "section_id": "ECON4444-004",
+    "instructor": "Dr. Anderson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 312",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 23
+  },
+  {
+    "course_code": "ECON 4720",
+    "section_id": "ECON4720-001",
+    "instructor": "Dr. Moore",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 339",
+    "semester": "Fall 2026",
+    "enrollment_cap": 100,
+    "enrollment_current": 16
+  },
+  {
+    "course_code": "ECON 4720",
+    "section_id": "ECON4720-002",
+    "instructor": "Dr. Williams",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 233",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 7
+  },
+  {
+    "course_code": "EVSC 3020",
+    "section_id": "EVSC3020-001",
+    "instructor": "Dr. White",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 214",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 41
+  },
+  {
+    "course_code": "EVSC 3020",
+    "section_id": "EVSC3020-002",
+    "instructor": "Dr. Jones",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "15:30",
+    "end_time": "16:45",
+    "location": "Rice 248",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 29
+  },
+  {
+    "course_code": "EVSC 3020",
+    "section_id": "EVSC3020-003",
+    "instructor": "Dr. White",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 176",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 8
+  },
+  {
+    "course_code": "EVSC 3020",
+    "section_id": "EVSC3020-004",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "15:30",
+    "end_time": "16:45",
+    "location": "Rice 251",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 36
+  },
+  {
+    "course_code": "EVSC 4010",
+    "section_id": "EVSC4010-001",
+    "instructor": "Dr. Williams",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 157",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 52
+  },
+  {
+    "course_code": "EVSC 4010",
+    "section_id": "EVSC4010-002",
+    "instructor": "Dr. Smith",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 207",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 15
+  },
+  {
+    "course_code": "EVSC 4010",
+    "section_id": "EVSC4010-003",
+    "instructor": "Dr. Jones",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "14:00",
+    "end_time": "15:15",
+    "location": "Rice 144",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 19
+  },
+  {
+    "course_code": "EVSC 4015",
+    "section_id": "EVSC4015-001",
+    "instructor": "Dr. Harris",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 143",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 21
+  },
+  {
+    "course_code": "EVSC 4070",
+    "section_id": "EVSC4070-001",
+    "instructor": "Dr. Brown",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "14:00",
+    "end_time": "15:15",
+    "location": "Rice 161",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 23
+  },
+  {
+    "course_code": "EVSC 4070",
+    "section_id": "EVSC4070-002",
+    "instructor": "Dr. Martinez",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "11:00",
+    "end_time": "11:50",
+    "location": "Rice 290",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 19
+  },
+  {
+    "course_code": "EVSC 4070",
+    "section_id": "EVSC4070-003",
+    "instructor": "Dr. Thomas",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 173",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 4
+  },
+  {
+    "course_code": "EVSC 4080",
+    "section_id": "EVSC4080-001",
+    "instructor": "Dr. Jones",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 207",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 129
+  },
+  {
+    "course_code": "HIST 2212",
+    "section_id": "HIST2212-001",
+    "instructor": "Dr. Williams",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "15:30",
+    "end_time": "16:45",
+    "location": "Rice 148",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 160
+  },
+  {
+    "course_code": "HIST 2212",
+    "section_id": "HIST2212-002",
+    "instructor": "Dr. Harris",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 117",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 12
+  },
+  {
+    "course_code": "HIUS 3162",
+    "section_id": "HIUS3162-001",
+    "instructor": "Dr. Brown",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 333",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 30
+  },
+  {
+    "course_code": "HIUS 3162",
+    "section_id": "HIUS3162-002",
+    "instructor": "Dr. Thomas",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "17:00",
+    "end_time": "18:15",
+    "location": "Rice 369",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 39
+  },
+  {
+    "course_code": "HIUS 3162",
+    "section_id": "HIUS3162-003",
+    "instructor": "Dr. White",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "09:30",
+    "end_time": "10:45",
+    "location": "Rice 173",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 8
+  },
+  {
+    "course_code": "HIUS 3162",
+    "section_id": "HIUS3162-004",
+    "instructor": "Dr. Miller",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 262",
+    "semester": "Fall 2026",
+    "enrollment_cap": 100,
+    "enrollment_current": 76
+  },
+  {
+    "course_code": "LING 3400",
+    "section_id": "LING3400-001",
+    "instructor": "Dr. Martinez",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "17:00",
+    "end_time": "18:15",
+    "location": "Rice 147",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 21
+  },
+  {
+    "course_code": "LING 3400",
+    "section_id": "LING3400-002",
+    "instructor": "Dr. Brown",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 350",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 0
+  },
+  {
+    "course_code": "LING 3400",
+    "section_id": "LING3400-003",
+    "instructor": "Dr. Davis",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 205",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 29
+  },
+  {
+    "course_code": "LNGS 3250",
+    "section_id": "LNGS3250-001",
+    "instructor": "Dr. Miller",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "17:00",
+    "end_time": "18:15",
+    "location": "Rice 326",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 44
+  },
+  {
+    "course_code": "LNGS 3250",
+    "section_id": "LNGS3250-002",
+    "instructor": "Dr. Johnson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "15:30",
+    "end_time": "16:45",
+    "location": "Rice 299",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 19
+  },
+  {
+    "course_code": "MATH 3100",
+    "section_id": "MATH3100-001",
+    "instructor": "Dr. Anderson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 179",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 58
+  },
+  {
+    "course_code": "MATH 3315",
+    "section_id": "MATH3315-001",
+    "instructor": "Dr. Davis",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "11:00",
+    "end_time": "11:50",
+    "location": "Rice 349",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 11
+  },
+  {
+    "course_code": "MATH 3315",
+    "section_id": "MATH3315-002",
+    "instructor": "Dr. Thompson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "14:00",
+    "end_time": "15:15",
+    "location": "Rice 195",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 12
+  },
+  {
+    "course_code": "MATH 3350",
+    "section_id": "MATH3350-001",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 162",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 27
+  },
+  {
+    "course_code": "MATH 3350",
+    "section_id": "MATH3350-002",
+    "instructor": "Dr. Thompson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 331",
+    "semester": "Fall 2026",
+    "enrollment_cap": 100,
+    "enrollment_current": 79
+  },
+  {
+    "course_code": "MATH 3350",
+    "section_id": "MATH3350-003",
+    "instructor": "Dr. Martin",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 264",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 0
+  },
+  {
+    "course_code": "MATH 3350",
+    "section_id": "MATH3350-004",
+    "instructor": "Dr. Thomas",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "17:00",
+    "end_time": "18:15",
+    "location": "Rice 327",
+    "semester": "Fall 2026",
+    "enrollment_cap": 100,
+    "enrollment_current": 29
+  },
+  {
+    "course_code": "MATH 3351",
+    "section_id": "MATH3351-001",
+    "instructor": "Dr. Johnson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 176",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 103
+  },
+  {
+    "course_code": "MATH 3351",
+    "section_id": "MATH3351-002",
+    "instructor": "Dr. Wilson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 350",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 77
+  },
+  {
+    "course_code": "MATH 3354",
+    "section_id": "MATH3354-001",
+    "instructor": "Dr. Johnson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 253",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 13
+  },
+  {
+    "course_code": "MATH 4300",
+    "section_id": "MATH4300-001",
+    "instructor": "Dr. Jones",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "13:00",
+    "end_time": "13:50",
+    "location": "Rice 289",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 22
+  },
+  {
+    "course_code": "MATH 4300",
+    "section_id": "MATH4300-002",
+    "instructor": "Dr. Wilson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "14:00",
+    "end_time": "15:15",
+    "location": "Rice 193",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 112
+  },
+  {
+    "course_code": "MATH 4651",
+    "section_id": "MATH4651-001",
+    "instructor": "Dr. Jones",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 167",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 28
+  },
+  {
+    "course_code": "MATH 4651",
+    "section_id": "MATH4651-002",
+    "instructor": "Dr. Brown",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 276",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 32
+  },
+  {
+    "course_code": "MATH 4651",
+    "section_id": "MATH4651-003",
+    "instructor": "Dr. Smith",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 275",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 13
+  },
+  {
+    "course_code": "MATH 4651",
+    "section_id": "MATH4651-004",
+    "instructor": "Dr. Robinson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "14:00",
+    "end_time": "15:15",
+    "location": "Rice 248",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 72
+  },
+  {
+    "course_code": "MDST 2000",
+    "section_id": "MDST2000-001",
+    "instructor": "Dr. Williams",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "15:30",
+    "end_time": "16:45",
+    "location": "Rice 168",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 52
+  },
+  {
+    "course_code": "MDST 2000",
+    "section_id": "MDST2000-002",
+    "instructor": "Dr. Robinson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 282",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 7
+  },
+  {
+    "course_code": "MDST 2000",
+    "section_id": "MDST2000-003",
+    "instructor": "Dr. Moore",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 295",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 16
+  },
+  {
+    "course_code": "MDST 3050",
+    "section_id": "MDST3050-001",
+    "instructor": "Dr. Brown",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 177",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 5
+  },
+  {
+    "course_code": "MDST 3050",
+    "section_id": "MDST3050-002",
+    "instructor": "Dr. White",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "11:00",
+    "end_time": "11:50",
+    "location": "Rice 176",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 77
+  },
+  {
+    "course_code": "MDST 3050",
+    "section_id": "MDST3050-003",
+    "instructor": "Dr. Robinson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 238",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 31
+  },
+  {
+    "course_code": "MDST 3108",
+    "section_id": "MDST3108-001",
+    "instructor": "Dr. Miller",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 285",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 38
+  },
+  {
+    "course_code": "MDST 3108",
+    "section_id": "MDST3108-002",
+    "instructor": "Dr. Anderson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "13:00",
+    "end_time": "13:50",
+    "location": "Rice 377",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 6
+  },
+  {
+    "course_code": "MDST 3108",
+    "section_id": "MDST3108-003",
+    "instructor": "Dr. Williams",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 196",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 70
+  },
+  {
+    "course_code": "MDST 3108",
+    "section_id": "MDST3108-004",
+    "instructor": "Dr. Miller",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "09:30",
+    "end_time": "10:45",
+    "location": "Rice 237",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 5
+  },
+  {
+    "course_code": "MDST 3320",
+    "section_id": "MDST3320-001",
+    "instructor": "Dr. Miller",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "15:30",
+    "end_time": "16:45",
+    "location": "Rice 178",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 36
+  },
+  {
+    "course_code": "MDST 3320",
+    "section_id": "MDST3320-002",
+    "instructor": "Dr. Martin",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 258",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 35
+  },
+  {
+    "course_code": "MDST 3404",
+    "section_id": "MDST3404-001",
+    "instructor": "Dr. Williams",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 321",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 51
+  },
+  {
+    "course_code": "MDST 3430",
+    "section_id": "MDST3430-001",
+    "instructor": "Dr. Martin",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 311",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 165
+  },
+  {
+    "course_code": "MDST 3430",
+    "section_id": "MDST3430-002",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 359",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 18
+  },
+  {
+    "course_code": "MDST 3504",
+    "section_id": "MDST3504-001",
+    "instructor": "Dr. Thomas",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 267",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 4
+  },
+  {
+    "course_code": "MDST 3504",
+    "section_id": "MDST3504-002",
+    "instructor": "Dr. Wilson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "11:00",
+    "end_time": "11:50",
+    "location": "Rice 240",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 61
+  },
+  {
+    "course_code": "MDST 3665",
+    "section_id": "MDST3665-001",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 373",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 29
+  },
+  {
+    "course_code": "MDST 3665",
+    "section_id": "MDST3665-002",
+    "instructor": "Dr. Thompson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 340",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 6
+  },
+  {
+    "course_code": "MDST 3665",
+    "section_id": "MDST3665-003",
+    "instructor": "Dr. White",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 277",
+    "semester": "Fall 2026",
+    "enrollment_cap": 100,
+    "enrollment_current": 51
+  },
+  {
+    "course_code": "MDST 3665",
+    "section_id": "MDST3665-004",
+    "instructor": "Dr. Williams",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 124",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 100
+  },
+  {
+    "course_code": "MDST 3701",
+    "section_id": "MDST3701-001",
+    "instructor": "Dr. Robinson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 155",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 12
+  },
+  {
+    "course_code": "MDST 3701",
+    "section_id": "MDST3701-002",
+    "instructor": "Dr. Wilson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 127",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 2
+  },
+  {
+    "course_code": "MDST 3712",
+    "section_id": "MDST3712-001",
+    "instructor": "Dr. Miller",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 321",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 29
+  },
+  {
+    "course_code": "MDST 3712",
+    "section_id": "MDST3712-002",
+    "instructor": "Dr. Martinez",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 156",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 1
+  },
+  {
+    "course_code": "MDST 3712",
+    "section_id": "MDST3712-003",
+    "instructor": "Dr. Martin",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 176",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 133
+  },
+  {
+    "course_code": "MDST 3750",
+    "section_id": "MDST3750-001",
+    "instructor": "Dr. Martin",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 134",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 0
+  },
+  {
+    "course_code": "MDST 3751",
+    "section_id": "MDST3751-001",
+    "instructor": "Dr. Williams",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "17:00",
+    "end_time": "18:15",
+    "location": "Rice 292",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 120
+  },
+  {
+    "course_code": "MDST 3751",
+    "section_id": "MDST3751-002",
+    "instructor": "Dr. Robinson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "15:30",
+    "end_time": "16:45",
+    "location": "Rice 166",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 41
+  },
+  {
+    "course_code": "MDST 3751",
+    "section_id": "MDST3751-003",
+    "instructor": "Dr. Martinez",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 134",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 11
+  },
+  {
+    "course_code": "MDST 3751",
+    "section_id": "MDST3751-004",
+    "instructor": "Dr. Smith",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 149",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 42
+  },
+  {
+    "course_code": "MDST 3755",
+    "section_id": "MDST3755-001",
+    "instructor": "Dr. White",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "09:30",
+    "end_time": "10:45",
+    "location": "Rice 165",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 33
+  },
+  {
+    "course_code": "MDST 3755",
+    "section_id": "MDST3755-002",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 126",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 38
+  },
+  {
+    "course_code": "MDST 3755",
+    "section_id": "MDST3755-003",
+    "instructor": "Dr. Garcia",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 228",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 49
+  },
+  {
+    "course_code": "MDST 3755",
+    "section_id": "MDST3755-004",
+    "instructor": "Dr. Thomas",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "11:00",
+    "end_time": "11:50",
+    "location": "Rice 138",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 68
+  },
+  {
+    "course_code": "MUSI 2350",
+    "section_id": "MUSI2350-001",
+    "instructor": "Dr. Thomas",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 369",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 57
+  },
+  {
+    "course_code": "MUSI 2350",
+    "section_id": "MUSI2350-002",
+    "instructor": "Dr. Moore",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 277",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 28
+  },
+  {
+    "course_code": "MUSI 2350",
+    "section_id": "MUSI2350-003",
+    "instructor": "Dr. White",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "15:30",
+    "end_time": "16:45",
+    "location": "Rice 243",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 20
+  },
+  {
+    "course_code": "MUSI 2390",
+    "section_id": "MUSI2390-001",
+    "instructor": "Dr. Johnson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 382",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 40
+  },
+  {
+    "course_code": "MUSI 2390",
+    "section_id": "MUSI2390-002",
+    "instructor": "Dr. Williams",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "13:00",
+    "end_time": "13:50",
+    "location": "Rice 232",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 63
+  },
+  {
+    "course_code": "MUSI 2390",
+    "section_id": "MUSI2390-003",
+    "instructor": "Dr. Jones",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "11:00",
+    "end_time": "11:50",
+    "location": "Rice 125",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 14
+  },
+  {
+    "course_code": "MUSI 2390",
+    "section_id": "MUSI2390-004",
+    "instructor": "Dr. Brown",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 396",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 81
+  },
+  {
+    "course_code": "MUSI 3374",
+    "section_id": "MUSI3374-001",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "09:30",
+    "end_time": "10:45",
+    "location": "Rice 295",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 48
+  },
+  {
+    "course_code": "MUSI 3374",
+    "section_id": "MUSI3374-002",
+    "instructor": "Dr. Williams",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 375",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 31
+  },
+  {
+    "course_code": "MUSI 3390",
+    "section_id": "MUSI3390-001",
+    "instructor": "Dr. Brown",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 112",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 42
+  },
+  {
+    "course_code": "MUSI 3390",
+    "section_id": "MUSI3390-002",
+    "instructor": "Dr. Williams",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 281",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 32
+  },
+  {
+    "course_code": "MUSI 3390",
+    "section_id": "MUSI3390-003",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 160",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 43
+  },
+  {
+    "course_code": "MUSI 3390",
+    "section_id": "MUSI3390-004",
+    "instructor": "Dr. Anderson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 137",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 23
+  },
+  {
+    "course_code": "MUSI 4535",
+    "section_id": "MUSI4535-001",
+    "instructor": "Dr. Robinson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 347",
+    "semester": "Fall 2026",
+    "enrollment_cap": 100,
+    "enrollment_current": 67
+  },
+  {
+    "course_code": "MUSI 4535",
+    "section_id": "MUSI4535-002",
+    "instructor": "Dr. Davis",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 348",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 62
+  },
+  {
+    "course_code": "MUSI 4535",
+    "section_id": "MUSI4535-003",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 149",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 28
+  },
+  {
+    "course_code": "MUSI 4540",
+    "section_id": "MUSI4540-001",
+    "instructor": "Dr. Davis",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 210",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 141
+  },
+  {
+    "course_code": "MUSI 4540",
+    "section_id": "MUSI4540-002",
+    "instructor": "Dr. Wilson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "09:30",
+    "end_time": "10:45",
+    "location": "Rice 369",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 3
+  },
+  {
+    "course_code": "MUSI 4540",
+    "section_id": "MUSI4540-003",
+    "instructor": "Dr. Thompson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 180",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 9
+  },
+  {
+    "course_code": "MUSI 4543",
+    "section_id": "MUSI4543-001",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 250",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 69
+  },
+  {
+    "course_code": "MUSI 4543",
+    "section_id": "MUSI4543-002",
+    "instructor": "Dr. Thompson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 172",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 18
+  },
+  {
+    "course_code": "MUSI 4543",
+    "section_id": "MUSI4543-003",
+    "instructor": "Dr. Thompson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "15:30",
+    "end_time": "16:45",
+    "location": "Rice 365",
+    "semester": "Fall 2026",
+    "enrollment_cap": 100,
+    "enrollment_current": 77
+  },
+  {
+    "course_code": "MUSI 4543",
+    "section_id": "MUSI4543-004",
+    "instructor": "Dr. Moore",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 169",
+    "semester": "Fall 2026",
+    "enrollment_cap": 100,
+    "enrollment_current": 21
+  },
+  {
+    "course_code": "MUSI 4545",
+    "section_id": "MUSI4545-001",
+    "instructor": "Dr. Smith",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 274",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 29
+  },
+  {
+    "course_code": "MUSI 4545",
+    "section_id": "MUSI4545-002",
+    "instructor": "Dr. Martinez",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "09:30",
+    "end_time": "10:45",
+    "location": "Rice 145",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 29
+  },
+  {
+    "course_code": "MUSI 4600",
+    "section_id": "MUSI4600-001",
+    "instructor": "Dr. Thompson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 171",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 29
+  },
+  {
+    "course_code": "MUSI 4610",
+    "section_id": "MUSI4610-001",
+    "instructor": "Dr. Johnson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 183",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 25
+  },
+  {
+    "course_code": "MUSI 4610",
+    "section_id": "MUSI4610-002",
+    "instructor": "Dr. Thompson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "14:00",
+    "end_time": "15:15",
+    "location": "Rice 277",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 6
+  },
+  {
+    "course_code": "MUSI 4610",
+    "section_id": "MUSI4610-003",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "09:30",
+    "end_time": "10:45",
+    "location": "Rice 263",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 8
+  },
+  {
+    "course_code": "MUSI 4610",
+    "section_id": "MUSI4610-004",
+    "instructor": "Dr. Martinez",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 348",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 20
+  },
+  {
+    "course_code": "MUSI 4620",
+    "section_id": "MUSI4620-001",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 387",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 88
+  },
+  {
+    "course_code": "MUSI 4620",
+    "section_id": "MUSI4620-002",
+    "instructor": "Dr. Williams",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 249",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 40
+  },
+  {
+    "course_code": "MUSI 4620",
+    "section_id": "MUSI4620-003",
+    "instructor": "Dr. Harris",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "09:30",
+    "end_time": "10:45",
+    "location": "Rice 399",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 10
+  },
+  {
+    "course_code": "PHIL 1410",
+    "section_id": "PHIL1410-001",
+    "instructor": "Dr. Davis",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 224",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 50
+  },
+  {
+    "course_code": "PHIL 1510",
+    "section_id": "PHIL1510-001",
+    "instructor": "Dr. Garcia",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 218",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 13
+  },
+  {
+    "course_code": "PHIL 1510",
+    "section_id": "PHIL1510-002",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 152",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 175
+  },
+  {
+    "course_code": "PHIL 1510",
+    "section_id": "PHIL1510-003",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 265",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 10
+  },
+  {
+    "course_code": "PHIL 2420",
+    "section_id": "PHIL2420-001",
+    "instructor": "Dr. Harris",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 264",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 29
+  },
+  {
+    "course_code": "PHIL 2420",
+    "section_id": "PHIL2420-002",
+    "instructor": "Dr. Wilson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 232",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 16
+  },
+  {
+    "course_code": "PHIL 2420",
+    "section_id": "PHIL2420-003",
+    "instructor": "Dr. Robinson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "09:30",
+    "end_time": "10:45",
+    "location": "Rice 161",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 41
+  },
+  {
+    "course_code": "PHIL 3400",
+    "section_id": "PHIL3400-001",
+    "instructor": "Dr. Jones",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "11:00",
+    "end_time": "11:50",
+    "location": "Rice 119",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 15
+  },
+  {
+    "course_code": "PHIL 3620",
+    "section_id": "PHIL3620-001",
+    "instructor": "Dr. Smith",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 196",
+    "semester": "Fall 2026",
+    "enrollment_cap": 100,
+    "enrollment_current": 80
+  },
+  {
+    "course_code": "PHIL 3620",
+    "section_id": "PHIL3620-002",
+    "instructor": "Dr. Martinez",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 234",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 139
+  },
+  {
+    "course_code": "PHIL 3620",
+    "section_id": "PHIL3620-003",
+    "instructor": "Dr. Harris",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "13:00",
+    "end_time": "13:50",
+    "location": "Rice 272",
+    "semester": "Fall 2026",
+    "enrollment_cap": 100,
+    "enrollment_current": 23
+  },
+  {
+    "course_code": "PHYS 2660",
+    "section_id": "PHYS2660-001",
+    "instructor": "Dr. Harris",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 178",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 18
+  },
+  {
+    "course_code": "PHYS 2660",
+    "section_id": "PHYS2660-002",
+    "instructor": "Dr. Anderson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "09:30",
+    "end_time": "10:45",
+    "location": "Rice 230",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 28
+  },
+  {
+    "course_code": "PSYC 2150",
+    "section_id": "PSYC2150-001",
+    "instructor": "Dr. Smith",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 324",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 106
+  },
+  {
+    "course_code": "PSYC 2150",
+    "section_id": "PSYC2150-002",
+    "instructor": "Dr. Garcia",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 195",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 132
+  },
+  {
+    "course_code": "PSYC 2200",
+    "section_id": "PSYC2200-001",
+    "instructor": "Dr. Harris",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 259",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 18
+  },
+  {
+    "course_code": "PSYC 2200",
+    "section_id": "PSYC2200-002",
+    "instructor": "Dr. Brown",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "11:00",
+    "end_time": "11:50",
+    "location": "Rice 151",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 31
+  },
+  {
+    "course_code": "PSYC 2300",
+    "section_id": "PSYC2300-001",
+    "instructor": "Dr. Wilson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 299",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 14
+  },
+  {
+    "course_code": "PSYC 2700",
+    "section_id": "PSYC2700-001",
+    "instructor": "Dr. Harris",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 228",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 88
+  },
+  {
+    "course_code": "PSYC 2700",
+    "section_id": "PSYC2700-002",
+    "instructor": "Dr. Harris",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "11:00",
+    "end_time": "11:50",
+    "location": "Rice 374",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 92
+  },
+  {
+    "course_code": "PSYC 2700",
+    "section_id": "PSYC2700-003",
+    "instructor": "Dr. Wilson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "11:00",
+    "end_time": "11:50",
+    "location": "Rice 231",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 41
+  },
+  {
+    "course_code": "PSYC 2700",
+    "section_id": "PSYC2700-004",
+    "instructor": "Dr. Thomas",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "14:00",
+    "end_time": "15:15",
+    "location": "Rice 173",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 5
+  },
+  {
+    "course_code": "PSYC 3160",
+    "section_id": "PSYC3160-001",
+    "instructor": "Dr. Garcia",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 254",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 12
+  },
+  {
+    "course_code": "PSYC 3160",
+    "section_id": "PSYC3160-002",
+    "instructor": "Dr. Miller",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "14:00",
+    "end_time": "15:15",
+    "location": "Rice 118",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 69
+  },
+  {
+    "course_code": "PSYC 3160",
+    "section_id": "PSYC3160-003",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 275",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 33
+  },
+  {
+    "course_code": "PSYC 3310",
+    "section_id": "PSYC3310-001",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "17:00",
+    "end_time": "18:15",
+    "location": "Rice 304",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 23
+  },
+  {
+    "course_code": "PSYC 3310",
+    "section_id": "PSYC3310-002",
+    "instructor": "Dr. Smith",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "11:00",
+    "end_time": "11:50",
+    "location": "Rice 194",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 13
+  },
+  {
+    "course_code": "PSYC 3310",
+    "section_id": "PSYC3310-003",
+    "instructor": "Dr. Brown",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 238",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 21
+  },
+  {
+    "course_code": "PSYC 4110",
+    "section_id": "PSYC4110-001",
+    "instructor": "Dr. Anderson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 196",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 59
+  },
+  {
+    "course_code": "PSYC 4110",
+    "section_id": "PSYC4110-002",
+    "instructor": "Dr. Robinson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 199",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 16
+  },
+  {
+    "course_code": "PSYC 4110",
+    "section_id": "PSYC4110-003",
+    "instructor": "Dr. Thompson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 105",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 76
+  },
+  {
+    "course_code": "PSYC 4200",
+    "section_id": "PSYC4200-001",
+    "instructor": "Dr. Garcia",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "13:00",
+    "end_time": "13:50",
+    "location": "Rice 384",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 47
+  },
+  {
+    "course_code": "PSYC 4200",
+    "section_id": "PSYC4200-002",
+    "instructor": "Dr. Thompson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 271",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 25
+  },
+  {
+    "course_code": "SOC 4780",
+    "section_id": "SOC4780-001",
+    "instructor": "Dr. Thomas",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "15:30",
+    "end_time": "16:45",
+    "location": "Rice 264",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 47
+  },
+  {
+    "course_code": "SOC 4780",
+    "section_id": "SOC4780-002",
+    "instructor": "Dr. Thomas",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 339",
+    "semester": "Fall 2026",
+    "enrollment_cap": 100,
+    "enrollment_current": 44
+  },
+  {
+    "course_code": "SOC 4780",
+    "section_id": "SOC4780-003",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 284",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 110
+  },
+  {
+    "course_code": "STAT 1100",
+    "section_id": "STAT1100-001",
+    "instructor": "Dr. Miller",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 112",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 1
+  },
+  {
+    "course_code": "STAT 1100",
+    "section_id": "STAT1100-002",
+    "instructor": "Dr. Smith",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 136",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 4
+  },
+  {
+    "course_code": "STAT 1100",
+    "section_id": "STAT1100-003",
+    "instructor": "Dr. Moore",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 283",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 103
+  },
+  {
+    "course_code": "STAT 1120",
+    "section_id": "STAT1120-001",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 310",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 6
+  },
+  {
+    "course_code": "STAT 1120",
+    "section_id": "STAT1120-002",
+    "instructor": "Dr. Smith",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "15:30",
+    "end_time": "16:45",
+    "location": "Rice 359",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 14
+  },
+  {
+    "course_code": "STAT 1120",
+    "section_id": "STAT1120-003",
+    "instructor": "Dr. Williams",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 389",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 49
+  },
+  {
+    "course_code": "STAT 2020",
+    "section_id": "STAT2020-001",
+    "instructor": "Dr. Moore",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "17:00",
+    "end_time": "18:15",
+    "location": "Rice 343",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 25
+  },
+  {
+    "course_code": "STAT 2120",
+    "section_id": "STAT2120-001",
+    "instructor": "Dr. Anderson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 372",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 33
+  },
+  {
+    "course_code": "STAT 2120",
+    "section_id": "STAT2120-002",
+    "instructor": "Dr. Robinson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 238",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 55
+  },
+  {
+    "course_code": "STAT 2120",
+    "section_id": "STAT2120-003",
+    "instructor": "Dr. Taylor",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "12:00",
+    "end_time": "12:50",
+    "location": "Rice 265",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 58
+  },
+  {
+    "course_code": "STAT 2120",
+    "section_id": "STAT2120-004",
+    "instructor": "Dr. Wilson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "14:00",
+    "end_time": "14:50",
+    "location": "Rice 198",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 52
+  },
+  {
+    "course_code": "STAT 3080",
+    "section_id": "STAT3080-001",
+    "instructor": "Dr. Miller",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 327",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 113
+  },
+  {
+    "course_code": "STAT 3080",
+    "section_id": "STAT3080-002",
+    "instructor": "Dr. Jones",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "14:00",
+    "end_time": "15:15",
+    "location": "Rice 111",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 138
+  },
+  {
+    "course_code": "STAT 3080",
+    "section_id": "STAT3080-003",
+    "instructor": "Dr. Moore",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "16:00",
+    "end_time": "16:50",
+    "location": "Rice 368",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 87
+  },
+  {
+    "course_code": "STAT 3080",
+    "section_id": "STAT3080-004",
+    "instructor": "Dr. Anderson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "15:00",
+    "end_time": "15:50",
+    "location": "Rice 205",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 95
+  },
+  {
+    "course_code": "STAT 3110",
+    "section_id": "STAT3110-001",
+    "instructor": "Dr. Williams",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 373",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 7
+  },
+  {
+    "course_code": "STAT 3120",
+    "section_id": "STAT3120-001",
+    "instructor": "Dr. Smith",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 235",
+    "semester": "Fall 2026",
+    "enrollment_cap": 30,
+    "enrollment_current": 23
+  },
+  {
+    "course_code": "STAT 3120",
+    "section_id": "STAT3120-002",
+    "instructor": "Dr. Martin",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "11:00",
+    "end_time": "12:15",
+    "location": "Rice 184",
+    "semester": "Fall 2026",
+    "enrollment_cap": 200,
+    "enrollment_current": 172
+  },
+  {
+    "course_code": "STAT 3220",
+    "section_id": "STAT3220-001",
+    "instructor": "Dr. Martin",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "12:30",
+    "end_time": "13:45",
+    "location": "Rice 300",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 12
+  },
+  {
+    "course_code": "STAT 3220",
+    "section_id": "STAT3220-002",
+    "instructor": "Dr. Thomas",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 299",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 23
+  },
+  {
+    "course_code": "STAT 3280",
+    "section_id": "STAT3280-001",
+    "instructor": "Dr. Anderson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "14:00",
+    "end_time": "15:15",
+    "location": "Rice 362",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 25
+  },
+  {
+    "course_code": "STAT 4220",
+    "section_id": "STAT4220-001",
+    "instructor": "Dr. Anderson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "09:00",
+    "end_time": "09:50",
+    "location": "Rice 135",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 6
+  },
+  {
+    "course_code": "STAT 4630",
+    "section_id": "STAT4630-001",
+    "instructor": "Dr. Robinson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "09:30",
+    "end_time": "10:45",
+    "location": "Rice 230",
+    "semester": "Fall 2026",
+    "enrollment_cap": 150,
+    "enrollment_current": 127
+  },
+  {
+    "course_code": "STAT 4630",
+    "section_id": "STAT4630-002",
+    "instructor": "Dr. Smith",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "14:00",
+    "end_time": "15:15",
+    "location": "Rice 229",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 44
+  },
+  {
+    "course_code": "WGS 3415",
+    "section_id": "WGS3415-001",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "11:00",
+    "end_time": "11:50",
+    "location": "Rice 237",
+    "semester": "Fall 2026",
+    "enrollment_cap": 40,
+    "enrollment_current": 23
+  },
+  {
+    "course_code": "WGS 3415",
+    "section_id": "WGS3415-002",
+    "instructor": "Dr. Thompson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 364",
+    "semester": "Fall 2026",
+    "enrollment_cap": 80,
+    "enrollment_current": 39
+  },
+  {
+    "course_code": "WGS 3415",
+    "section_id": "WGS3415-003",
+    "instructor": "Dr. Jackson",
+    "days": [
+      "M",
+      "W",
+      "F"
+    ],
+    "start_time": "10:00",
+    "end_time": "10:50",
+    "location": "Rice 244",
+    "semester": "Fall 2026",
+    "enrollment_cap": 60,
+    "enrollment_current": 16
+  },
+  {
+    "course_code": "WGS 3415",
+    "section_id": "WGS3415-004",
+    "instructor": "Dr. Wilson",
+    "days": [
+      "T",
+      "R"
+    ],
+    "start_time": "17:00",
+    "end_time": "18:15",
+    "location": "Rice 354",
+    "semester": "Fall 2026",
+    "enrollment_cap": 50,
+    "enrollment_current": 33
+  }
+]
