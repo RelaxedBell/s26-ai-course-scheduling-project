@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #232d4b, #e57200);
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+header h1 { font-size: 1.8rem; margin-bottom: 0.25rem; }
+header p { opacity: 0.85; font-size: 0.95rem; }
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
+
+.panel {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #232d4b;
+    border-bottom: 2px solid #e57200;
+    padding-bottom: 0.5rem;
+}
+
+h3 { font-size: 1rem; margin: 1rem 0 0.5rem; color: #232d4b; }
+
+/* Course Checklist */
+.course-checklist {
+    max-height: 250px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.course-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.course-item:hover { background: #f0f4ff; }
+.course-code { font-weight: 600; min-width: 70px; }
+.course-name { color: #666; }
+
+/* Buttons */
+.btn {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.btn-primary {
+    background: #232d4b;
+    color: white;
+}
+
+.btn-primary:hover { background: #1a2340; }
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tab {
+    padding: 0.4rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.tab.active {
+    background: #232d4b;
+    color: white;
+    border-color: #232d4b;
+}
+
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* Form */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    font-size: 0.85rem;
+}
+
+.form-group input[type="range"] { width: 100%; }
+.form-group input[type="number"] { width: 60px; padding: 0.3rem; border: 1px solid #ddd; border-radius: 4px; }
+
+.topic-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.chip {
+    padding: 0.3rem 0.7rem;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+}
+
+.chip:has(input:checked) {
+    background: #e57200;
+    color: white;
+    border-color: #e57200;
+}
+
+.chip input { display: none; }
+
+/* Chat */
+.chat-messages {
+    min-height: 150px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.chat-msg {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    max-width: 85%;
+}
+
+.chat-msg.user {
+    background: #232d4b;
+    color: white;
+    margin-left: auto;
+}
+
+.chat-msg.bot {
+    background: #f0f4ff;
+}
+
+.chat-input-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.chat-input-row input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Results */
+.result-box {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+}
+
+.placeholder {
+    color: #999;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Schedule Cards */
+.schedule-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: white;
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.schedule-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.schedule-card.selected {
+    border-color: #e57200;
+    box-shadow: 0 0 0 2px #e57200;
+}
+
+.schedule-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.score-badge {
+    background: #e57200;
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Schedule Grid */
+.schedule-grid {
+    display: grid;
+    grid-template-columns: 60px repeat(5, 1fr);
+    gap: 2px;
+    font-size: 0.75rem;
+}
+
+.grid-header {
+    background: #232d4b;
+    color: white;
+    padding: 0.3rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.grid-time {
+    background: #f0f0f0;
+    padding: 0.2rem 0.3rem;
+    text-align: right;
+    font-size: 0.7rem;
+}
+
+.grid-cell {
+    min-height: 24px;
+    border: 1px solid #f0f0f0;
+}
+
+.course-block {
+    padding: 0.2rem 0.3rem;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.section-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.section-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0.6rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    font-size: 0.8rem;
+}
+
+.section-item .code { font-weight: 700; color: #232d4b; }
+.section-item .name { color: #666; flex: 1; margin: 0 0.5rem; }
+.section-item .time { color: #888; font-size: 0.75rem; }
+.section-item .score-pill {
+    background: #eef;
+    padding: 0.1rem 0.4rem;
+    border-radius: 10px;
+    font-size: 0.7rem;
+}
+
+/* Rating */
+.rating-stars {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.rating-stars input { flex: 1; }
+
+@media (max-width: 900px) {
+    .container { grid-template-columns: 1fr; }
+}
