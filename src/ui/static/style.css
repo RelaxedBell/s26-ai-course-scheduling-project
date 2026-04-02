@@ -49,6 +49,73 @@ h2 {
 
 h3 { font-size: 1rem; margin: 1rem 0 0.5rem; color: #232d4b; }
 
+/* Transcript Upload */
+.transcript-upload-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+}
+
+.transcript-upload-row p {
+    flex: 1 1 100%;
+    margin-bottom: 0;
+}
+
+.btn-upload {
+    background: #e57200;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-upload:hover { background: #c56200; }
+
+#upload-status {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.upload-success { color: #27ae60 !important; font-weight: 600; }
+.upload-error { color: #c0392b !important; font-weight: 600; }
+
+/* Course Filter */
+.course-filter {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.course-filter input[type="text"] {
+    flex: 1;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.btn-small {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+}
+
+.btn-small:hover { background: #f0f4ff; }
+
 /* Course Checklist */
 .course-checklist {
     max-height: 250px;
@@ -202,6 +269,11 @@ h3 { font-size: 1rem; margin: 1rem 0 0.5rem; color: #232d4b; }
     padding: 1rem;
     margin-top: 1rem;
     font-size: 0.85rem;
+    white-space: pre-wrap;
+}
+
+#explanation-text {
+    white-space: pre-wrap;
 }
 
 .placeholder {

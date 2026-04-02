@@ -32,6 +32,94 @@ function switchTab(tab) {
     event.target.classList.add('active');
 }
 
+// --- Transcript PDF upload ---
+async function uploadTranscript(input) {
+    const file = input.files[0];
+    if (!file) return;
+
+    const statusEl = document.getElementById('upload-status');
+    statusEl.textContent = 'Parsing transcript...';
+    statusEl.className = '';
+
+    const formData = new FormData();
+    formData.append('file', file);
+
+    try {
+        const res = await fetch(API + '/api/transcript/upload', {
+            method: 'POST',
+            body: formData,
+        });
+        const data = await res.json();
+
+        if (!res.ok) {
+            statusEl.textContent = data.detail || 'Upload failed';
+            statusEl.className = 'upload-error';
+            return;
+        }
+
+        // Auto-check matched courses
+        document.querySelectorAll('.course-checkbox').forEach(cb => {
+            cb.checked = data.matched_courses.includes(cb.value);
+        });
+
+        const unmatchedText = data.unmatched_courses.length > 0
+            ? ` (${data.unmatched_courses.length} non-CS courses excluded)`
+            : '';
+        statusEl.textContent = `Found ${data.total_extracted} courses, matched ${data.matched_courses.length} in catalog${unmatchedText}`;
+        statusEl.className = 'upload-success';
+    } catch (err) {
+        statusEl.textContent = 'Upload failed: ' + err.message;
+        statusEl.className = 'upload-error';
+    }
+
+    // Reset file input so the same file can be re-uploaded
+    input.value = '';
+}
+
+// --- Mutually exclusive course groups (only one can be checked) ---
+const MUTUALLY_EXCLUSIVE = [
+    ['CS 1110', 'CS 1111', 'CS 1112', 'CS 1113'],
+];
+
+document.addEventListener('change', (e) => {
+    if (!e.target.classList.contains('course-checkbox') || !e.target.checked) return;
+    const val = e.target.value;
+    for (const group of MUTUALLY_EXCLUSIVE) {
+        if (group.includes(val)) {
+            document.querySelectorAll('.course-checkbox').forEach(cb => {
+                if (cb !== e.target && group.includes(cb.value)) {
+                    cb.checked = false;
+                }
+            });
+            break;
+        }
+    }
+});
+
+// --- Course filtering ---
+function filterCourses(query) {
+    const q = query.toLowerCase();
+    document.querySelectorAll('.course-item').forEach(item => {
+        const code = item.dataset.code.toLowerCase();
+        const name = item.querySelector('.course-name').textContent.toLowerCase();
+        item.style.display = (code.includes(q) || name.includes(q)) ? '' : 'none';
+    });
+}
+
+function selectAllVisible() {
+    document.querySelectorAll('.course-item').forEach(item => {
+        if (item.style.display !== 'none') {
+            item.querySelector('.course-checkbox').checked = true;
+        }
+    });
+}
+
+function clearAll() {
+    document.querySelectorAll('.course-checkbox').forEach(cb => {
+        cb.checked = false;
+    });
+}
+
 // --- Transcript submission ---
 async function submitTranscript() {
     const checkboxes = document.querySelectorAll('.course-checkbox:checked');
@@ -45,15 +133,21 @@ async function submitTranscript() {
     const data = await res.json();
 
     const resultDiv = document.getElementById('audit-result');
-    resultDiv.innerHTML = `
-        <strong>Degree Audit</strong><br>
-        Credits completed: ${data.credits_completed}<br>
-        Remaining prerequisites: ${data.remaining_prerequisites.length > 0 ? data.remaining_prerequisites.join(', ') : 'None'}<br>
-        Remaining required: ${data.remaining_required.length > 0 ? data.remaining_required.join(', ') : 'None'}<br>
-        Restricted elective credits needed: ${Math.max(0, data.restricted_elective_credits_needed)}<br>
-        Integration elective credits needed: ${Math.max(0, data.integration_elective_credits_needed)}<br>
-        ${data.is_complete ? '<strong style="color: green;">Degree requirements complete!</strong>' : ''}
-    `;
+    const prereqs = data.remaining_prerequisites.length > 0
+        ? data.remaining_prerequisites.join(', ') : 'None';
+    const required = data.remaining_required.length > 0
+        ? data.remaining_required.join(', ') : 'None';
+    const completeLine = data.is_complete
+        ? '\nDegree requirements complete!' : '';
+    resultDiv.textContent = [
+        'Degree Audit',
+        `Credits completed: ${data.credits_completed}`,
+        `Remaining prerequisites: ${prereqs}`,
+        `Remaining required: ${required}`,
+        `Restricted elective credits needed: ${Math.max(0, data.restricted_elective_credits_needed)}`,
+        `Integration elective credits needed: ${Math.max(0, data.integration_elective_credits_needed)}`,
+        completeLine,
+    ].filter(Boolean).join('\n');
 }
 
 // --- Schedule generation ---
@@ -164,7 +258,7 @@ async function selectSchedule(idx, prefs, completed) {
         }),
     });
     const data = await res.json();
-    explainText.innerHTML = data.explanation.replace(/\n/g, '<br>');
+    explainText.textContent = data.explanation;
 
     // Show rating
     document.getElementById('rating-container').style.display = 'block';

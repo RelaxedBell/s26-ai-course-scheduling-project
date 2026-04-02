@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from fastapi import APIRouter, HTTPException, Request
+from fastapi import APIRouter, HTTPException, Request, UploadFile, File
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from pathlib import Path
@@ -21,6 +21,7 @@ from src.api.schemas import (
     ScheduleResponse,
     ScheduleSectionResponse,
     TranscriptRequest,
+    TranscriptUploadResponse,
 )
 from src.api.state import AppState
 from src.llm.explainer import explain_schedule
@@ -30,6 +31,7 @@ from src.models.constraint_solver import ScheduleGenerator
 from src.student.degree_requirements import compute_remaining_requirements
 from src.student.preferences import StudentPreferences
 from src.student.transcript import Transcript
+from src.student.transcript_parser import parse_transcript_pdf
 
 router = APIRouter()
 
@@ -114,6 +116,48 @@ async def audit_transcript(
         completed_integration_electives=status.completed_integration_electives,
         is_complete=status.is_complete,
         credits_completed=transcript.credits_completed(state.courses),
+    )
+
+
+@router.post("/api/transcript/upload")
+async def upload_transcript(
+    request: Request, file: UploadFile = File(...)
+) -> TranscriptUploadResponse:
+    """Parse an uploaded SIS transcript PDF and return extracted course codes."""
+    if not file.filename or not file.filename.lower().endswith(".pdf"):
+        raise HTTPException(400, "Please upload a PDF file.")
+
+    # Stream-read with size limit to prevent memory exhaustion
+    max_bytes = 5 * 1024 * 1024
+    chunks: list[bytes] = []
+    total = 0
+    while True:
+        chunk = await file.read(65_536)
+        if not chunk:
+            break
+        total += len(chunk)
+        if total > max_bytes:
+            raise HTTPException(400, "File too large (max 5MB).")
+        chunks.append(chunk)
+    pdf_bytes = b"".join(chunks)
+
+    # Validate PDF magic bytes
+    if not pdf_bytes.startswith(b"%PDF-"):
+        raise HTTPException(400, "Uploaded file does not appear to be a valid PDF.")
+
+    try:
+        all_courses = parse_transcript_pdf(pdf_bytes)
+    except Exception:
+        raise HTTPException(400, "Could not parse PDF. Is it a valid SIS transcript?")
+
+    state = _get_state(request)
+    catalog_codes = set(state.courses.keys())
+    matched = [c for c in all_courses if c in catalog_codes]
+    unmatched = [c for c in all_courses if c not in catalog_codes]
+    return TranscriptUploadResponse(
+        matched_courses=matched,
+        unmatched_courses=unmatched,
+        total_extracted=len(all_courses),
     )
 
 

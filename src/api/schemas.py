@@ -24,6 +24,12 @@ class RequirementStatusResponse(BaseModel):
     credits_completed: int
 
 
+class TranscriptUploadResponse(BaseModel):
+    matched_courses: list[str]
+    unmatched_courses: list[str]
+    total_extracted: int
+
+
 class PreferencesRequest(BaseModel):
     mode: str = Field(
         default="json",
