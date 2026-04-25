@@ -124,6 +124,20 @@ python -m pytest .\tests\ -v
 - **`source` command does not work**: `source` is a Unix command. In PowerShell use `.\.venv\Scripts\Activate.ps1`.
 - **Activation script blocked**: run `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` and try activation again.
 - **`python` not recognized**: use `py` instead (for example, `py -m pytest .\tests\ -v`).
+- **`ollama` is not recognized**: usually your current PowerShell session has not picked up the new `PATH` yet.
+  - Close and reopen PowerShell, then run:
+    ```powershell
+    Get-Command ollama
+    ```
+  - If still not found, run Ollama by full path:
+    ```powershell
+    & "$env:LOCALAPPDATA\Programs\Ollama\ollama.exe" --version
+    & "$env:LOCALAPPDATA\Programs\Ollama\ollama.exe" pull qwen2.5:7b
+    ```
+  - Optional: refresh PATH in the current terminal session:
+    ```powershell
+    $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+    ```
 - **`os error 396` when installing packages**: this is usually a OneDrive hardlink limitation when `uv` installs into `.venv`.
   - Example error includes: `The cloud operation cannot be performed on a file with incompatible hardlinks. (os error 396)`
   - Fix for current terminal session:

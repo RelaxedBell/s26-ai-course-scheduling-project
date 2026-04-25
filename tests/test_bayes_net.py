@@ -130,3 +130,14 @@ class TestNaiveBayesScorer:
         scorer.train(self.courses, self.summaries, prefs)
         results = scorer.score_courses(self.courses, self.summaries)
         assert len(results) > 0
+
+    def test_scores_not_all_saturated(self):
+        """Calibrated scores should have readable spread, not all 100%."""
+        scorer = NaiveBayesScorer()
+        prefs = StudentPreferences(preferred_topics=["AI"])
+        scorer.train(self.courses, self.summaries, prefs)
+        results = scorer.score_courses(self.courses, self.summaries)
+        scores = [s for _, s in results]
+        assert max(scores) <= 0.951
+        assert min(scores) >= 0.049
+        assert len(set(round(s, 3) for s in scores)) > 3
