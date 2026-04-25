@@ -7,3 +7,4 @@ data/models/*.pt
 data/evaluations/
 *.ipynb_checkpoints/
 .env
+example transcript/

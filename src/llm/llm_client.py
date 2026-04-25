@@ -68,6 +68,38 @@ class OllamaClient(LLMClient):
             raise
 
 
+class AnthropicClient(LLMClient):
+    """LLM client using the Anthropic Claude API."""
+
+    def __init__(self, model: str = "claude-haiku-4-5"):
+        import os
+        import anthropic
+
+        key = os.environ.get("ANTHROPIC_API_KEY")
+        if not key:
+            raise ValueError("ANTHROPIC_API_KEY environment variable is not set.")
+        self._client = anthropic.Anthropic(api_key=key)
+        self._model = model
+
+    def generate(
+        self,
+        prompt: str,
+        system_prompt: str = "",
+        max_tokens: int = 1024,
+    ) -> str:
+        try:
+            message = self._client.messages.create(
+                model=self._model,
+                max_tokens=max_tokens,
+                system=system_prompt if system_prompt else "",
+                messages=[{"role": "user", "content": prompt}],
+            )
+            return message.content[0].text
+        except Exception as e:
+            logger.warning("Anthropic request failed: %s", e)
+            raise
+
+
 class TemplateLLMClient(LLMClient):
     """Fallback template-based 'LLM' for when no server is available.
 
@@ -196,7 +228,8 @@ def create_llm_client(
     """Create an LLM client with the specified backend.
 
     Args:
-        backend: 'ollama', 'template', or 'auto' (try ollama, fall back to template).
+        backend: 'ollama', 'anthropic', 'template', or 'auto'
+                 (try ollama → anthropic → template).
         model: Model name for Ollama.
     """
     if backend == "template":
@@ -205,7 +238,10 @@ def create_llm_client(
     if backend == "ollama":
         return OllamaClient(model=model)
 
-    # Auto: try Ollama, fall back to template
+    if backend == "anthropic":
+        return AnthropicClient()
+
+    # Auto: try Ollama → Anthropic → template
     if backend == "auto":
         try:
             import httpx
@@ -215,7 +251,17 @@ def create_llm_client(
                 return OllamaClient(model=model)
         except Exception:
             pass
-        logger.info("Ollama not available, using template backend")
+
+        try:
+            import os
+            if os.environ.get("ANTHROPIC_API_KEY"):
+                client = AnthropicClient()
+                logger.info("Anthropic API key found, using Anthropic backend")
+                return client
+        except Exception:
+            pass
+
+        logger.info("No LLM backend available, using template backend")
         return TemplateLLMClient()
 
     raise ValueError(f"Unknown backend: {backend}")

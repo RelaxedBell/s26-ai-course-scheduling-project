@@ -20,10 +20,26 @@
                 <!-- Step 1: Transcript -->
                 <section id="transcript-section">
                     <h2>1. Your Transcript</h2>
-                    <p>Select courses you've completed:</p>
+                    <div class="transcript-upload-row">
+                        <p>Upload your SIS transcript PDF or select courses manually:</p>
+                        <label class="btn btn-upload" for="transcript-file">
+                            Upload Transcript PDF
+                        </label>
+                        <input type="file" id="transcript-file" accept=".pdf"
+                               onchange="uploadTranscript(this)" style="display:none">
+                        <span id="upload-status"></span>
+                    </div>
+                    <div id="course-filter" class="course-filter">
+                        <input type="text" id="course-search" placeholder="Filter courses..."
+                               oninput="filterCourses(this.value)">
+                        <div class="filter-buttons">
+                            <button type="button" class="btn btn-small" onclick="selectAllVisible()">Select visible</button>
+                            <button type="button" class="btn btn-small" onclick="clearAll()">Clear all</button>
+                        </div>
+                    </div>
                     <div class="course-checklist" id="course-checklist">
                         {% for course in courses %}
-                        <label class="course-item" data-type="{{ course.type }}">
+                        <label class="course-item" data-type="{{ course.type }}" data-code="{{ course.code }}">
                             <input type="checkbox" value="{{ course.code }}" class="course-checkbox">
                             <span class="course-code">{{ course.code }}</span>
                             <span class="course-name">{{ course.name }}</span>

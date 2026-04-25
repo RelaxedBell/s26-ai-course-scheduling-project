@@ -7,6 +7,11 @@ import networkx as nx
 from src.data.course_loader import Course
 from src.data.prerequisite_ast import AndNode, CourseNode, ReqNode, UnionNode
 
+# Mutually exclusive course groups: taking any one bars the others.
+MUTUALLY_EXCLUSIVE_GROUPS: list[frozenset[str]] = [
+    frozenset({"CS 1110", "CS 1111", "CS 1112", "CS 1113"}),
+]
+
 
 def _collect_course_nodes(node: ReqNode | None) -> list[CourseNode]:
     """Recursively collect all CourseNode leaves from an AST."""
@@ -100,10 +105,20 @@ class CourseGraph:
         return _check_satisfied(course.prerequisites_parsed, completed)
 
     def courses_available_after(self, completed: set[str]) -> set[str]:
-        """Return courses whose prerequisites are satisfied and not yet taken."""
+        """Return courses whose prerequisites are satisfied and not yet taken.
+
+        Excludes courses that are mutually exclusive with already-completed
+        courses (e.g. CS 1111 is excluded if CS 1110 was taken).
+        """
+        # Build the set of codes blocked by mutual exclusion
+        excluded: set[str] = set()
+        for group in MUTUALLY_EXCLUSIVE_GROUPS:
+            if completed & group:
+                excluded |= group
+
         available = set()
         for code in self._courses:
-            if code in completed:
+            if code in completed or code in excluded:
                 continue
             if self.prerequisites_satisfied(code, completed):
                 available.add(code)
