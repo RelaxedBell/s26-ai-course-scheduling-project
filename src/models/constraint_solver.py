@@ -116,7 +116,12 @@ class ScheduleGenerator:
             if len(schedules) >= max_schedules:
                 break
             result = self._backtrack_search(
-                candidate_codes, max_courses, min_courses, randomize=True
+                candidate_codes,
+                max_courses,
+                min_courses,
+                self._preferences.min_credits,
+                self._preferences.max_credits,
+                randomize=True,
             )
             if result is not None and not self._is_duplicate(result, schedules):
                 score = self._score_schedule(result)
@@ -134,6 +139,8 @@ class ScheduleGenerator:
         candidates: list[str],
         max_courses: int,
         min_courses: int,
+        min_credits: int,
+        max_credits: int,
         randomize: bool = False,
     ) -> list[CourseSection] | None:
         """Backtracking search with forward checking."""
@@ -144,7 +151,7 @@ class ScheduleGenerator:
             random.shuffle(remaining)
 
         return self._backtrack(
-            assignment, remaining, max_courses, min_courses
+            assignment, remaining, max_courses, min_courses, min_credits, max_credits
         )
 
     def _backtrack(
@@ -153,19 +160,36 @@ class ScheduleGenerator:
         remaining: list[str],
         max_courses: int,
         min_courses: int,
+        min_credits: int,
+        max_credits: int,
     ) -> list[CourseSection] | None:
-        assigned_codes = {s.course_code for s in assignment}
+        current_credits = self._assignment_credits(assignment)
+
+        # Hard credit ceiling.
+        if current_credits > max_credits:
+            return None
+
+        # If even taking all remaining courses cannot reach min credits, prune.
+        max_possible = current_credits + sum(
+            self._credit_lookup.get(code, 3) for code in remaining
+        )
+        if max_possible < min_credits:
+            return None
 
         # If we have enough courses, return the assignment
         if len(assignment) >= min_courses:
             if len(assignment) >= max_courses or not remaining:
-                return list(assignment)
+                if min_credits <= current_credits <= max_credits:
+                    return list(assignment)
+                return None
             # Try to add more, but current assignment is valid
             # Continue searching but save current as fallback
             pass
 
         if not remaining and len(assignment) >= min_courses:
-            return list(assignment)
+            if min_credits <= current_credits <= max_credits:
+                return list(assignment)
+            return None
 
         if not remaining:
             return None
@@ -186,7 +210,12 @@ class ScheduleGenerator:
             if self._is_consistent(section, assignment):
                 assignment.append(section)
                 result = self._backtrack(
-                    assignment, new_remaining, max_courses, min_courses
+                    assignment,
+                    new_remaining,
+                    max_courses,
+                    min_courses,
+                    min_credits,
+                    max_credits,
                 )
                 if result is not None:
                     return result
@@ -194,12 +223,29 @@ class ScheduleGenerator:
 
         # Try skipping this course entirely
         result = self._backtrack(
-            assignment, new_remaining, max_courses, min_courses
+            assignment,
+            new_remaining,
+            max_courses,
+            min_courses,
+            min_credits,
+            max_credits,
         )
         if result is not None:
             return result
 
-        return list(assignment) if len(assignment) >= min_courses else None
+        if (
+            len(assignment) >= min_courses
+            and min_credits <= current_credits <= max_credits
+        ):
+            return list(assignment)
+        return None
+
+    def _assignment_credits(self, assignment: list[CourseSection]) -> int:
+        """Compute total credits for the current assignment."""
+        return sum(
+            self._credit_lookup.get(s.course_code, 3)
+            for s in assignment
+        )
 
     def _mrv_select(
         self,

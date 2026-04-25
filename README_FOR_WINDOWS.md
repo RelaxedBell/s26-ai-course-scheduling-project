@@ -70,6 +70,26 @@ python -m pytest .\tests\ -v
 - **`source` command does not work**: `source` is a Unix command. In PowerShell use `.\.venv\Scripts\Activate.ps1`.
 - **Activation script blocked**: run `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` and try activation again.
 - **`python` not recognized**: use `py` instead (for example, `py -m pytest .\tests\ -v`).
+- **`os error 396` when installing packages**: this is usually a OneDrive hardlink limitation when `uv` installs into `.venv`.
+  - Example error includes: `The cloud operation cannot be performed on a file with incompatible hardlinks. (os error 396)`
+  - Fix for current terminal session:
+    ```powershell
+    $env:UV_LINK_MODE = "copy"
+    $env:UV_CACHE_DIR = "$env:LOCALAPPDATA\uv\cache"
+    ```
+    Then reinstall:
+    ```powershell
+    if (Test-Path .venv) { Remove-Item .venv -Recurse -Force }
+    uv venv .venv
+    .\.venv\Scripts\Activate.ps1
+    uv pip install -r requirements.txt
+    ```
+  - Optional (persist for future PowerShell sessions):
+    ```powershell
+    [Environment]::SetEnvironmentVariable("UV_LINK_MODE","copy","User")
+    [Environment]::SetEnvironmentVariable("UV_CACHE_DIR","$env:LOCALAPPDATA\uv\cache","User")
+    ```
+    Reopen PowerShell after setting persistent variables.
 
 ## Architecture
 
