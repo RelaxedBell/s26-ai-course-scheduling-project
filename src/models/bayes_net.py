@@ -31,6 +31,7 @@ class NaiveBayesScorer:
     def __init__(self):
         self._model = GaussianNB()
         self._is_trained = False
+        self._last_preferences = StudentPreferences()
 
     def train(
         self,
@@ -72,20 +73,25 @@ class NaiveBayesScorer:
 
         self._model.fit(X, y)
         self._is_trained = True
+        self._last_preferences = preferences
 
     def score_courses(
         self,
         candidate_courses: dict[str, Course],
         summaries: dict[str, CourseSummary],
     ) -> list[tuple[str, float]]:
-        """Score candidate courses by P(liked | features).
+        """Score candidate courses by calibrated affinity in [0, 1].
 
-        Returns a list of (course_code, probability) sorted by score descending.
+        Raw Naive Bayes probabilities can saturate near 0/1, so we apply a
+        min-max calibration across the current candidate pool to improve
+        rank readability in the UI while preserving ordering.
+
+        Returns a list of (course_code, score) sorted by score descending.
         """
         if not self._is_trained:
             raise RuntimeError("Model must be trained before scoring")
 
-        results = []
+        raw_scores: dict[str, float] = {}
         for code, course in candidate_courses.items():
             summary = summaries.get(code)
             feat = extract_course_features(course, summary).reshape(1, -1)
@@ -93,8 +99,13 @@ class NaiveBayesScorer:
 
             # prob[1] = P(liked=1 | features)
             liked_prob = prob[1] if len(prob) > 1 else prob[0]
-            results.append((code, float(liked_prob)))
+            alignment = compute_preference_alignment(
+                course, summary, self._last_preferences
+            )
+            raw_scores[code] = 0.7 * float(liked_prob) + 0.3 * alignment
 
+        calibrated = self._calibrate_scores(raw_scores)
+        results = list(calibrated.items())
         return sorted(results, key=lambda x: x[1], reverse=True)
 
     def score_single(
@@ -109,3 +120,17 @@ class NaiveBayesScorer:
         feat = extract_course_features(course, summary).reshape(1, -1)
         prob = self._model.predict_proba(feat)[0]
         return float(prob[1]) if len(prob) > 1 else float(prob[0])
+
+    def _calibrate_scores(self, raw_scores: dict[str, float]) -> dict[str, float]:
+        """Rescale raw probabilities to a readable [0.05, 0.95] range."""
+        if not raw_scores:
+            return {}
+        values = list(raw_scores.values())
+        low = min(values)
+        high = max(values)
+        if high - low < 1e-8:
+            return {code: 0.5 for code in raw_scores}
+        return {
+            code: 0.05 + 0.9 * ((score - low) / (high - low))
+            for code, score in raw_scores.items()
+        }

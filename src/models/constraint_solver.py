@@ -66,6 +66,7 @@ class ScheduleGenerator:
         preferences: StudentPreferences,
         course_scores: dict[str, float] | None = None,
         credit_lookup: dict[str, int] | None = None,
+        course_type_lookup: dict | None = None,
     ):
         self._graph = course_graph
         self._sections_by_course = sections_by_course(all_sections)
@@ -73,6 +74,7 @@ class ScheduleGenerator:
         self._preferences = preferences
         self._scores = course_scores or {}
         self._credit_lookup = credit_lookup or {}
+        self._course_type_lookup = course_type_lookup or {}
 
     def generate(
         self,

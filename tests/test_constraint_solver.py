@@ -108,6 +108,22 @@ class TestScheduleGenerator:
         scores = [s.score for s in schedules]
         assert scores == sorted(scores, reverse=True)
 
+    def test_respects_credit_range(self):
+        prefs = StudentPreferences(min_credits=12, max_credits=15, credit_tolerance=0)
+        completed = frozenset({"CS 1110", "CS 2100", "CS 2120", "CS 2130"})
+        gen = ScheduleGenerator(
+            self.graph, self.sections, completed, prefs,
+            credit_lookup=self.credit_lookup,
+        )
+        schedules = gen.generate(max_schedules=5)
+        assert len(schedules) > 0
+        for sched in schedules:
+            total_credits = sum(
+                self.credit_lookup.get(section.course_code, 3)
+                for section in sched.sections
+            )
+            assert 12 <= total_credits <= 15
+
     def test_with_bayes_scores(self):
         prefs = StudentPreferences(preferred_topics=["AI"])
         scorer = NaiveBayesScorer()
@@ -137,3 +153,4 @@ class TestScheduleGenerator:
         )
         schedules = gen.generate(max_schedules=5)
         assert len(schedules) == 0
+

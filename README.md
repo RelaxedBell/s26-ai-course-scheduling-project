@@ -6,6 +6,8 @@ An AI-powered course scheduling system for UVA CS students that recommends perso
 
 ## Quick Start
 
+### macOS / Linux
+
 ```bash
 # Create virtual environment and install dependencies
 uv venv .venv
@@ -21,11 +23,99 @@ uvicorn src.api.app:app --reload
 # Open http://localhost:8000 in your browser
 ```
 
+### Windows (PowerShell)
+
+#### Prerequisites
+
+- Python 3.11+ installed
+- PowerShell
+- `uv` package manager
+
+#### 1) Install `uv` (one-time)
+
+If `uv --version` fails, install `uv` with:
+
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+Then close and reopen PowerShell, and verify:
+
+```powershell
+uv --version
+```
+
+#### 2) Create virtual environment and install dependencies
+
+From the project root:
+
+```powershell
+uv venv .venv
+.\.venv\Scripts\Activate.ps1
+uv pip install -r requirements.txt
+```
+
+If activation is blocked by execution policy, run:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\.venv\Scripts\Activate.ps1
+```
+
+#### 3) Generate synthetic review and section data
+
+```powershell
+python .\scripts\generate_synthetic_data.py
+```
+
+#### 4) Run the web application
+
+```powershell
+uvicorn src.api.app:app --reload
+```
+
+Open [http://localhost:8000](http://localhost:8000) in your browser.
+
+#### 5) Start Ollama for natural-language schedule explanations (optional)
+
+If you want richer LLM-generated explanations (instead of template fallback), run Ollama locally.
+
+1. Install Ollama for Windows: [https://ollama.com/download/windows](https://ollama.com/download/windows)
+2. Launch the **Ollama** app from the Start Menu (this starts the local server).
+3. Pull the model used by this project:
+
+```powershell
+ollama pull qwen2.5:7b
+```
+
+4. Verify Ollama is running:
+
+```powershell
+ollama list
+```
+
+5. (Optional sanity check) run a direct prompt:
+
+```powershell
+ollama run qwen2.5:7b "Say hello in one sentence."
+```
+
+If your app still uses template responses, restart the app after starting Ollama so `backend="auto"` can detect `http://localhost:11434`.
+
 ## Running Tests
+
+### macOS / Linux
 
 ```bash
 source .venv/bin/activate
 python -m pytest tests/ -v
+```
+
+### Windows (PowerShell)
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+python -m pytest .\tests\ -v
 ```
 
 ## Rivanna LLM (development only)
@@ -299,6 +389,47 @@ Verify the GPU was released:
 ```bash
 ssh rivanna 'squeue -u $USER'   # should show no ai-llm-* job
 ```
+
+## Common Windows Issues
+
+- **`uv` is not recognized**: `uv` is not installed or not on `PATH`. Install it using the command above, then restart PowerShell.
+- **`source` command does not work**: `source` is a Unix command. In PowerShell use `.\.venv\Scripts\Activate.ps1`.
+- **Activation script blocked**: run `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` and try activation again.
+- **`python` not recognized**: use `py` instead (for example, `py -m pytest .\tests\ -v`).
+- **`ollama` is not recognized**: usually your current PowerShell session has not picked up the new `PATH` yet.
+  - Close and reopen PowerShell, then run:
+    ```powershell
+    Get-Command ollama
+    ```
+  - If still not found, run Ollama by full path:
+    ```powershell
+    & "$env:LOCALAPPDATA\Programs\Ollama\ollama.exe" --version
+    & "$env:LOCALAPPDATA\Programs\Ollama\ollama.exe" pull qwen2.5:7b
+    ```
+  - Optional: refresh PATH in the current terminal session:
+    ```powershell
+    $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+    ```
+- **`os error 396` when installing packages**: this is usually a OneDrive hardlink limitation when `uv` installs into `.venv`.
+  - Example error includes: `The cloud operation cannot be performed on a file with incompatible hardlinks. (os error 396)`
+  - Fix for current terminal session:
+    ```powershell
+    $env:UV_LINK_MODE = "copy"
+    $env:UV_CACHE_DIR = "$env:LOCALAPPDATA\uv\cache"
+    ```
+    Then reinstall:
+    ```powershell
+    if (Test-Path .venv) { Remove-Item .venv -Recurse -Force }
+    uv venv .venv
+    .\.venv\Scripts\Activate.ps1
+    uv pip install -r requirements.txt
+    ```
+  - Optional (persist for future PowerShell sessions):
+    ```powershell
+    [Environment]::SetEnvironmentVariable("UV_LINK_MODE","copy","User")
+    [Environment]::SetEnvironmentVariable("UV_CACHE_DIR","$env:LOCALAPPDATA\uv\cache","User")
+    ```
+    Reopen PowerShell after setting persistent variables.
 
 ## Architecture
 

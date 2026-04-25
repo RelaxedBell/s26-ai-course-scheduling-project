@@ -60,7 +60,7 @@ class ScheduleResponse(BaseModel):
 class GenerateRequest(BaseModel):
     completed_courses: list[str]
     preferences: StudentPreferences
-    max_schedules: int = Field(default=5, ge=1, le=20)
+    max_schedules: int = Field(default=6, ge=1, le=20)
 
 
 class GenerateResponse(BaseModel):

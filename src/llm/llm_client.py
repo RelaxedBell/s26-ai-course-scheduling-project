@@ -22,6 +22,7 @@ class LLMClient(ABC):
         prompt: str,
         system_prompt: str = "",
         max_tokens: int = 1024,
+        temperature: float = 0.2,
     ) -> str:
         """Generate text from a prompt."""
 
@@ -42,6 +43,7 @@ class OllamaClient(LLMClient):
         prompt: str,
         system_prompt: str = "",
         max_tokens: int = 1024,
+        temperature: float = 0.2,
     ) -> str:
         import httpx
 
@@ -57,7 +59,7 @@ class OllamaClient(LLMClient):
                     "model": self._model,
                     "messages": messages,
                     "stream": False,
-                    "options": {"num_predict": max_tokens},
+                    "options": {"num_predict": max_tokens, "temperature": temperature},
                 },
                 timeout=120.0,
             )
@@ -86,11 +88,13 @@ class AnthropicClient(LLMClient):
         prompt: str,
         system_prompt: str = "",
         max_tokens: int = 1024,
+        temperature: float = 0.2,
     ) -> str:
         try:
             message = self._client.messages.create(
                 model=self._model,
                 max_tokens=max_tokens,
+                temperature=temperature,
                 system=system_prompt if system_prompt else "",
                 messages=[{"role": "user", "content": prompt}],
             )
@@ -112,16 +116,24 @@ class TemplateLLMClient(LLMClient):
         prompt: str,
         system_prompt: str = "",
         max_tokens: int = 1024,
+        temperature: float = 0.2,
     ) -> str:
         # Try to detect what kind of request this is
         prompt_lower = prompt.lower()
+        system_prompt_lower = system_prompt.lower()
 
-        if "parse" in system_prompt.lower() or "preference" in system_prompt.lower():
-            return self._parse_preferences(prompt)
-        if "explain" in system_prompt.lower() or "schedule" in system_prompt.lower():
-            return self._explain_schedule(prompt)
-        if "sentiment" in system_prompt.lower():
+        # Check specific tasks first to avoid accidental routing.
+        if "sentiment" in system_prompt_lower:
             return self._analyze_sentiment(prompt)
+        if "explain" in system_prompt_lower or "schedule" in system_prompt_lower:
+            return self._explain_schedule(prompt)
+        if "parse" in system_prompt_lower:
+            return self._parse_preferences(prompt)
+        if (
+            "preference" in system_prompt_lower
+            and ("json" in system_prompt_lower or "extract" in system_prompt_lower)
+        ):
+            return self._parse_preferences(prompt)
 
         return "I can help you with course scheduling. Please tell me about your preferences."
 
