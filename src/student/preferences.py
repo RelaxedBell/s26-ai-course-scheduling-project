@@ -26,9 +26,33 @@ class StudentPreferences(BaseModel):
     )
     max_credits: int = Field(default=15, ge=3, le=21)
     min_credits: int = Field(default=12, ge=3, le=21)
+    credit_tolerance: int = Field(
+        default=2,
+        ge=0,
+        le=6,
+        description=(
+            "Allowed slack (in credits) around the min/max window. "
+            "A schedule is viable if its total credits fall in "
+            "[min_credits - tolerance, max_credits + tolerance]."
+        ),
+    )
     preferred_topics: list[str] = Field(
         default_factory=list,
         description="Keywords like 'AI', 'systems', 'security'",
+    )
+    preferred_departments: list[str] = Field(
+        default_factory=list,
+        description=(
+            "Department prefixes to consider for electives outside the "
+            "major (e.g. ['MATH', 'APMA', 'ECE'])."
+        ),
+    )
+    declared_major: str | None = Field(
+        default=None,
+        description=(
+            "Department prefix of the student's declared major (e.g. 'CS'). "
+            "Used to filter required/prerequisite courses by eligibility."
+        ),
     )
     liked_courses: list[str] = Field(
         default_factory=list,

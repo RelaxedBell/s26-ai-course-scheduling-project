@@ -27,6 +27,10 @@ from src.api.state import AppState
 from src.llm.explainer import explain_schedule
 from src.llm.preference_parser import parse_natural_language_preferences
 from src.models.bayes_net import NaiveBayesScorer
+from src.models.candidate_filter import (
+    CandidateFilter,
+    schedule_credits_in_window,
+)
 from src.models.constraint_solver import ScheduleGenerator
 from src.student.degree_requirements import compute_remaining_requirements
 from src.student.preferences import StudentPreferences
@@ -182,13 +186,20 @@ async def generate_schedules(
     state = _get_state(request)
     completed = frozenset(body.completed_courses)
 
+    # Pre-filter the candidate pool before any scoring or CSP work.
+    available = list(state.course_graph.courses_available_after(completed))
+    candidate_filter = CandidateFilter(
+        state.courses, state.sections, completed, body.preferences
+    )
+    filtered_candidates, _ = candidate_filter.filter(available)
+
     # Train Bayes Net on this student's preferences
     scorer = NaiveBayesScorer()
     scorer.train(state.courses, state.summaries, body.preferences)
     results = scorer.score_courses(state.courses, state.summaries)
     scores_dict = dict(results)
 
-    # Generate schedules via CSP
+    # Generate schedules via CSP over the filtered candidate set
     gen = ScheduleGenerator(
         state.course_graph,
         state.sections,
@@ -197,7 +208,22 @@ async def generate_schedules(
         course_scores=scores_dict,
         credit_lookup=state.credit_lookup,
     )
-    schedules = gen.generate(max_schedules=body.max_schedules)
+    schedules = gen.generate(
+        candidate_codes=filtered_candidates,
+        max_schedules=body.max_schedules,
+    )
+
+    # Enforce the credit tolerance window as a hard schedule-level filter
+    schedules = [
+        s for s in schedules
+        if schedule_credits_in_window(
+            sum(
+                state.credit_lookup.get(sec.course_code, 3)
+                for sec in s.sections
+            ),
+            body.preferences,
+        )
+    ]
 
     # Convert to response
     response_schedules = []
@@ -321,6 +347,13 @@ async def chat(request: Request, body: ChatRequest) -> ChatResponse:
 
         # Generate schedules
         completed = frozenset(session["completed_courses"])
+
+        available = list(state.course_graph.courses_available_after(completed))
+        candidate_filter = CandidateFilter(
+            state.courses, state.sections, completed, prefs
+        )
+        filtered_candidates, _ = candidate_filter.filter(available)
+
         scorer = NaiveBayesScorer()
         scorer.train(state.courses, state.summaries, prefs)
         scores_dict = dict(scorer.score_courses(state.courses, state.summaries))
@@ -333,7 +366,19 @@ async def chat(request: Request, body: ChatRequest) -> ChatResponse:
             course_scores=scores_dict,
             credit_lookup=state.credit_lookup,
         )
-        schedules = gen.generate(max_schedules=3)
+        schedules = gen.generate(
+            candidate_codes=filtered_candidates, max_schedules=3
+        )
+        schedules = [
+            s for s in schedules
+            if schedule_credits_in_window(
+                sum(
+                    state.credit_lookup.get(sec.course_code, 3)
+                    for sec in s.sections
+                ),
+                prefs,
+            )
+        ]
 
         response_schedules = []
         for i, sched in enumerate(schedules):

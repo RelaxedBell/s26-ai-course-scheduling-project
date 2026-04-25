@@ -56,11 +56,17 @@ scripts/           Synthetic data generation
 1. Student inputs their transcript (completed courses)
 2. System computes remaining degree requirements (BSCS)
 3. Student provides preferences (difficulty, topics, time constraints) via form or chatbot
-4. Naive Bayes Net scores all candidate courses by student-course affinity
-5. CSP solver generates valid schedules (no time conflicts, prerequisites satisfied)
-6. Neural Network reranks schedules by predicted quality
-7. LLM explains why each schedule was recommended
-8. Student rates schedules (1-10) for evaluation
+4. **Candidate filter** prunes the pool up front — drops already-taken
+   courses, majors-ineligible courses, electives outside the student's
+   chosen topics/departments, courses whose every section conflicts
+   with an unavailable time block, and courses above the credit ceiling
+   (`src/models/candidate_filter.py`)
+5. Naive Bayes Net scores the remaining candidates by student-course affinity
+6. CSP solver generates valid schedules (no time conflicts, prerequisites
+   satisfied, total credits within `[min_credits - tolerance, max_credits + tolerance]`)
+7. Neural Network reranks schedules by predicted quality
+8. LLM explains why each schedule was recommended
+9. Student rates schedules (1-10) for evaluation
 
 ## Data
 
