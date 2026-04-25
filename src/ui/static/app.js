@@ -179,7 +179,7 @@ async function generateSchedules() {
         body: JSON.stringify({
             completed_courses: completed,
             preferences: prefs,
-            max_schedules: 5,
+            max_schedules: 6,
         }),
     });
     const data = await res.json();

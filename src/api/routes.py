@@ -196,6 +196,7 @@ async def generate_schedules(
         body.preferences,
         course_scores=scores_dict,
         credit_lookup=state.credit_lookup,
+        course_type_lookup={code: c.course_type for code, c in state.courses.items()},
     )
     schedules = gen.generate(max_schedules=body.max_schedules)
 
@@ -248,7 +249,13 @@ async def explain(
     scores_dict = dict(scorer.score_courses(state.courses, state.summaries))
 
     explanation = explain_schedule(
-        sched, body.preferences, state.courses, scores_dict, state.llm_client
+        sched,
+        body.preferences,
+        state.courses,
+        scores_dict,
+        state.llm_client,
+        state.summaries,
+        frozenset(body.completed_courses),
     )
     return ExplainResponse(explanation=explanation)
 
@@ -332,8 +339,9 @@ async def chat(request: Request, body: ChatRequest) -> ChatResponse:
             prefs,
             course_scores=scores_dict,
             credit_lookup=state.credit_lookup,
+            course_type_lookup={code: c.course_type for code, c in state.courses.items()},
         )
-        schedules = gen.generate(max_schedules=3)
+        schedules = gen.generate(max_schedules=6)
 
         response_schedules = []
         for i, sched in enumerate(schedules):

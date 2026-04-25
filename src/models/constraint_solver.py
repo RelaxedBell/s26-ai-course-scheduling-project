@@ -10,6 +10,7 @@ import random
 from dataclasses import dataclass, field
 
 from src.data.course_graph import CourseGraph
+from src.data.course_loader import CourseType
 from src.data.section_data import CourseSection, sections_by_course
 from src.student.preferences import StudentPreferences, TimeBlock
 
@@ -66,6 +67,7 @@ class ScheduleGenerator:
         preferences: StudentPreferences,
         course_scores: dict[str, float] | None = None,
         credit_lookup: dict[str, int] | None = None,
+        course_type_lookup: dict[str, CourseType | str] | None = None,
     ):
         self._graph = course_graph
         self._sections_by_course = sections_by_course(all_sections)
@@ -73,6 +75,7 @@ class ScheduleGenerator:
         self._preferences = preferences
         self._scores = course_scores or {}
         self._credit_lookup = credit_lookup or {}
+        self._course_type_lookup = course_type_lookup or {}
 
     def generate(
         self,
@@ -328,7 +331,29 @@ class ScheduleGenerator:
         # Compactness bonus: fewer gaps between classes
         score += 0.1 * self._compactness_score(sections)
 
+        # Small elective-type preference: favor restricted over integration.
+        score += 0.05 * self._elective_preference_score(sections)
+
         return score
+
+    def _elective_preference_score(self, sections: list[CourseSection]) -> float:
+        """Return [-1, 1] bias score favoring restricted electives."""
+        if not sections:
+            return 0.0
+
+        restricted = 0
+        integration = 0
+        for sec in sections:
+            raw_type = self._course_type_lookup.get(sec.course_code)
+            course_type = (
+                raw_type.value if isinstance(raw_type, CourseType) else str(raw_type or "")
+            ).lower()
+            if course_type == CourseType.RESTRICTED_ELECTIVE.value:
+                restricted += 1
+            elif course_type == CourseType.INTEGRATION_ELECTIVE.value:
+                integration += 1
+
+        return (restricted - integration) / len(sections)
 
     def _compactness_score(self, sections: list[CourseSection]) -> float:
         """Score how compact the schedule is (fewer gaps = better)."""

@@ -3,6 +3,7 @@
 from pathlib import Path
 
 from src.data.course_loader import load_courses
+from src.data.review_data import get_all_summaries, load_reviews
 from src.llm.explainer import explain_schedule
 from src.llm.llm_client import TemplateLLMClient, create_llm_client
 from src.llm.preference_parser import parse_natural_language_preferences
@@ -12,6 +13,7 @@ from src.data.section_data import CourseSection
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 COURSES_JSON = PROJECT_ROOT / "courses.json"
+REVIEWS_PATH = PROJECT_ROOT / "data" / "reviews" / "synthetic_reviews.json"
 
 
 class TestTemplateLLMClient:
@@ -26,6 +28,17 @@ class TestTemplateLLMClient:
     def test_basic_generation(self):
         resp = self.client.generate("Hello", system_prompt="")
         assert len(resp) > 0
+
+    def test_explain_prompt_returns_natural_language_not_json(self):
+        resp = self.client.generate(
+            "Student preferences:\n- Credits: 12-15\nExplain this schedule.",
+            system_prompt=(
+                "You are a course scheduling advisor at UVA. "
+                "Explain why a recommended schedule is a good fit for the student."
+            ),
+        )
+        assert "{" not in resp
+        assert "selected" in resp.lower() or "schedule" in resp.lower()
 
 
 class TestPreferenceParser:
@@ -96,6 +109,7 @@ class TestExplainer:
     def setup_method(self):
         self.client = TemplateLLMClient()
         self.courses = load_courses(COURSES_JSON)
+        self.summaries = get_all_summaries(load_reviews(REVIEWS_PATH))
 
     def test_explain_schedule(self):
         from src.student.preferences import StudentPreferences
@@ -123,7 +137,16 @@ class TestExplainer:
         bayes_scores = {"CS 4710": 0.8, "CS 3100": 0.6}
 
         explanation = explain_schedule(
-            schedule, prefs, self.courses, bayes_scores, self.client
+            schedule,
+            prefs,
+            self.courses,
+            bayes_scores,
+            self.client,
+            self.summaries,
+            frozenset({"CS 1110", "CS 2100"}),
         )
         assert len(explanation) > 50
-        assert "schedule" in explanation.lower() or "course" in explanation.lower()
+        assert "CS 4710" in explanation
+        assert "CS 3100" in explanation
+        assert "affinity score" in explanation.lower()
+        assert "hours/week" in explanation or "instructor rating" in explanation
