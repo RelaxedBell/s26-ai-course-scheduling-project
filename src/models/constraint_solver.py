@@ -10,7 +10,6 @@ import random
 from dataclasses import dataclass, field
 
 from src.data.course_graph import CourseGraph
-from src.data.course_loader import CourseType
 from src.data.section_data import CourseSection, sections_by_course
 from src.student.preferences import StudentPreferences, TimeBlock
 
@@ -67,7 +66,7 @@ class ScheduleGenerator:
         preferences: StudentPreferences,
         course_scores: dict[str, float] | None = None,
         credit_lookup: dict[str, int] | None = None,
-        course_type_lookup: dict[str, CourseType | str] | None = None,
+        course_type_lookup: dict | None = None,
     ):
         self._graph = course_graph
         self._sections_by_course = sections_by_course(all_sections)
@@ -119,12 +118,7 @@ class ScheduleGenerator:
             if len(schedules) >= max_schedules:
                 break
             result = self._backtrack_search(
-                candidate_codes,
-                max_courses,
-                min_courses,
-                self._preferences.min_credits,
-                self._preferences.max_credits,
-                randomize=True,
+                candidate_codes, max_courses, min_courses, randomize=True
             )
             if result is not None and not self._is_duplicate(result, schedules):
                 score = self._score_schedule(result)
@@ -142,8 +136,6 @@ class ScheduleGenerator:
         candidates: list[str],
         max_courses: int,
         min_courses: int,
-        min_credits: int,
-        max_credits: int,
         randomize: bool = False,
     ) -> list[CourseSection] | None:
         """Backtracking search with forward checking."""
@@ -154,8 +146,24 @@ class ScheduleGenerator:
             random.shuffle(remaining)
 
         return self._backtrack(
-            assignment, remaining, max_courses, min_courses, min_credits, max_credits
+            assignment, remaining, max_courses, min_courses
         )
+
+    def _credit_total(self, assignment: list[CourseSection]) -> int:
+        seen: set[str] = set()
+        total = 0
+        for s in assignment:
+            if s.course_code in seen:
+                continue
+            seen.add(s.course_code)
+            total += self._credit_lookup.get(s.course_code, 3)
+        return total
+
+    def _assignment_in_window(self, assignment: list[CourseSection]) -> bool:
+        total = self._credit_total(assignment)
+        low = self._preferences.min_credits - self._preferences.credit_tolerance
+        high = self._preferences.max_credits + self._preferences.credit_tolerance
+        return low <= total <= high
 
     def _backtrack(
         self,
@@ -163,92 +171,74 @@ class ScheduleGenerator:
         remaining: list[str],
         max_courses: int,
         min_courses: int,
-        min_credits: int,
-        max_credits: int,
     ) -> list[CourseSection] | None:
-        current_credits = self._assignment_credits(assignment)
-
-        # Hard credit ceiling.
-        if current_credits > max_credits:
-            return None
-
-        # If even taking all remaining courses cannot reach min credits, prune.
-        max_possible = current_credits + sum(
-            self._credit_lookup.get(code, 3) for code in remaining
+        credit_ceiling = (
+            self._preferences.max_credits + self._preferences.credit_tolerance
         )
-        if max_possible < min_credits:
-            return None
+        current_credits = self._credit_total(assignment)
 
-        # If we have enough courses, return the assignment
-        if len(assignment) >= min_courses:
+        # If we have enough courses AND credits land in the window, accept.
+        if (
+            len(assignment) >= min_courses
+            and self._assignment_in_window(assignment)
+        ):
             if len(assignment) >= max_courses or not remaining:
-                if min_credits <= current_credits <= max_credits:
-                    return list(assignment)
-                return None
-            # Try to add more, but current assignment is valid
-            # Continue searching but save current as fallback
-            pass
-
-        if not remaining and len(assignment) >= min_courses:
-            if min_credits <= current_credits <= max_credits:
                 return list(assignment)
-            return None
+            # Current assignment is valid; keep exploring for a better fit
+            # but fall back to this if deeper search fails.
 
         if not remaining:
+            if (
+                len(assignment) >= min_courses
+                and self._assignment_in_window(assignment)
+            ):
+                return list(assignment)
             return None
 
         # MRV heuristic: pick the course with fewest valid sections
         best_idx = self._mrv_select(remaining, assignment)
         if best_idx is None:
-            return list(assignment) if len(assignment) >= min_courses else None
+            if (
+                len(assignment) >= min_courses
+                and self._assignment_in_window(assignment)
+            ):
+                return list(assignment)
+            return None
 
         course_code = remaining[best_idx]
         new_remaining = remaining[:best_idx] + remaining[best_idx + 1:]
 
-        # Try each section of this course (LCV: try sections with fewer conflicts first)
+        # Skip this course if adding it would exceed the credit ceiling.
+        course_credits = self._credit_lookup.get(course_code, 3)
+        can_add = current_credits + course_credits <= credit_ceiling
+
         sections = list(self._sections_by_course.get(course_code, []))
         random.shuffle(sections)
 
-        for section in sections:
-            if self._is_consistent(section, assignment):
-                assignment.append(section)
-                result = self._backtrack(
-                    assignment,
-                    new_remaining,
-                    max_courses,
-                    min_courses,
-                    min_credits,
-                    max_credits,
-                )
-                if result is not None:
-                    return result
-                assignment.pop()
+        if can_add:
+            for section in sections:
+                if self._is_consistent(section, assignment):
+                    assignment.append(section)
+                    result = self._backtrack(
+                        assignment, new_remaining, max_courses, min_courses
+                    )
+                    if result is not None:
+                        return result
+                    assignment.pop()
 
         # Try skipping this course entirely
         result = self._backtrack(
-            assignment,
-            new_remaining,
-            max_courses,
-            min_courses,
-            min_credits,
-            max_credits,
+            assignment, new_remaining, max_courses, min_courses
         )
         if result is not None:
             return result
 
         if (
             len(assignment) >= min_courses
-            and min_credits <= current_credits <= max_credits
+            and self._assignment_in_window(assignment)
         ):
             return list(assignment)
         return None
-
-    def _assignment_credits(self, assignment: list[CourseSection]) -> int:
-        """Compute total credits for the current assignment."""
-        return sum(
-            self._credit_lookup.get(s.course_code, 3)
-            for s in assignment
-        )
 
     def _mrv_select(
         self,
@@ -331,29 +321,7 @@ class ScheduleGenerator:
         # Compactness bonus: fewer gaps between classes
         score += 0.1 * self._compactness_score(sections)
 
-        # Small elective-type preference: favor restricted over integration.
-        score += 0.05 * self._elective_preference_score(sections)
-
         return score
-
-    def _elective_preference_score(self, sections: list[CourseSection]) -> float:
-        """Return [-1, 1] bias score favoring restricted electives."""
-        if not sections:
-            return 0.0
-
-        restricted = 0
-        integration = 0
-        for sec in sections:
-            raw_type = self._course_type_lookup.get(sec.course_code)
-            course_type = (
-                raw_type.value if isinstance(raw_type, CourseType) else str(raw_type or "")
-            ).lower()
-            if course_type == CourseType.RESTRICTED_ELECTIVE.value:
-                restricted += 1
-            elif course_type == CourseType.INTEGRATION_ELECTIVE.value:
-                integration += 1
-
-        return (restricted - integration) / len(sections)
 
     def _compactness_score(self, sections: list[CourseSection]) -> float:
         """Score how compact the schedule is (fewer gaps = better)."""

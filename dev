@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Top-level entrypoint. Forwards to scripts/dev_start.sh so you can just
+# run `./dev` from the project root instead of typing the full path.
+exec "$(dirname "$0")/scripts/dev_start.sh" "$@"

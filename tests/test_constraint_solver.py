@@ -3,7 +3,6 @@
 from pathlib import Path
 
 from src.data.course_graph import CourseGraph
-from src.data.section_data import CourseSection
 from src.data.course_loader import load_courses
 from src.data.review_data import get_all_summaries, load_reviews
 from src.data.section_data import load_sections
@@ -110,7 +109,7 @@ class TestScheduleGenerator:
         assert scores == sorted(scores, reverse=True)
 
     def test_respects_credit_range(self):
-        prefs = StudentPreferences(min_credits=12, max_credits=15)
+        prefs = StudentPreferences(min_credits=12, max_credits=15, credit_tolerance=0)
         completed = frozenset({"CS 1110", "CS 2100", "CS 2120", "CS 2130"})
         gen = ScheduleGenerator(
             self.graph, self.sections, completed, prefs,
@@ -155,37 +154,3 @@ class TestScheduleGenerator:
         schedules = gen.generate(max_schedules=5)
         assert len(schedules) == 0
 
-    def test_prefers_restricted_electives_over_integration(self):
-        prefs = StudentPreferences(min_credits=3, max_credits=6)
-        completed = frozenset({"CS 1110"})
-        restricted_sec = CourseSection(
-            course_code="TEST RESTRICTED",
-            section_id="001",
-            days=["M"],
-            start_time="10:00",
-            end_time="10:50",
-            instructor="Dr. R",
-        )
-        integration_sec = CourseSection(
-            course_code="TEST INTEGRATION",
-            section_id="001",
-            days=["T"],
-            start_time="10:00",
-            end_time="10:50",
-            instructor="Dr. I",
-        )
-        gen = ScheduleGenerator(
-            self.graph,
-            [restricted_sec, integration_sec],
-            completed,
-            prefs,
-            course_scores={"TEST RESTRICTED": 0.5, "TEST INTEGRATION": 0.5},
-            credit_lookup={"TEST RESTRICTED": 3, "TEST INTEGRATION": 3},
-            course_type_lookup={
-                "TEST RESTRICTED": "restricted elective",
-                "TEST INTEGRATION": "integration elective",
-            },
-        )
-        restricted_score = gen._score_schedule([restricted_sec])
-        integration_score = gen._score_schedule([integration_sec])
-        assert restricted_score > integration_score
