@@ -32,6 +32,7 @@ from src.models.candidate_filter import (
     schedule_credits_in_window,
 )
 from src.models.constraint_solver import ScheduleGenerator
+from src.models.neural_optimizer import ScheduleRanker
 from src.student.degree_requirements import compute_remaining_requirements
 from src.student.preferences import StudentPreferences
 from src.student.transcript import Transcript
@@ -48,6 +49,35 @@ _schedule_cache: dict[int, object] = {}
 
 def _get_state(request: Request) -> AppState:
     return request.app.state.app_state
+
+
+def _rerank_with_neural(
+    schedules: list,
+    courses: dict,
+    summaries: dict,
+    bayes_scores: dict[str, float],
+):
+    """Train a lightweight ranker on candidate schedules and rerank them."""
+    if len(schedules) < 2:
+        return schedules
+
+    try:
+        ranker = ScheduleRanker()
+        labels = [s.score for s in schedules]
+        ranker.train(
+            schedules,
+            labels,
+            courses,
+            summaries,
+            bayes_scores,
+            epochs=20,
+        )
+        return ranker.rerank_schedules(
+            schedules, courses, summaries, bayes_scores
+        )
+    except Exception:
+        # Keep schedule generation resilient if ML reranking fails at runtime.
+        return schedules
 
 
 # --- HTML Pages ---
@@ -225,6 +255,9 @@ async def generate_schedules(
             body.preferences,
         )
     ]
+    schedules = _rerank_with_neural(
+        schedules, state.courses, state.summaries, scores_dict
+    )
 
     # Convert to response
     response_schedules = []
@@ -387,6 +420,9 @@ async def chat(request: Request, body: ChatRequest) -> ChatResponse:
                 prefs,
             )
         ]
+        schedules = _rerank_with_neural(
+            schedules, state.courses, state.summaries, scores_dict
+        )
 
         response_schedules = []
         for i, sched in enumerate(schedules):
