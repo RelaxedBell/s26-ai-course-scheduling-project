@@ -279,7 +279,7 @@ expensive LLM calls in the two places where they are clearly justified.
 
     \draw[arrow] (transcript) -- (parser);
     \draw[arrow] (catalog)    -- (sentiment);
-    \draw[arrow] (catalog.east)    -| ([xshift=-2mm]parser.south);
+    \draw[arrow] (catalog.east)    |- (parser.west);
     \draw[arrow] (prefs)      -- (bayes);
     \draw[arrow] (parser)     -- (csp);
     \draw[arrow] (sentiment)  -- (csp);
