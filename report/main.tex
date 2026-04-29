@@ -273,9 +273,9 @@ expensive LLM calls in the two places where they are clearly justified.
     \node[box, right=10mm of prefs] (bayes) {Bayes net\\preference model};
 
     \node[box, right=10mm of sentiment] (csp) {Constraint\\solver (BT)};
-    \node[box, right=10mm of bayes, yshift=10mm] (nn) {Neural net\\scorer};
+    \node[box, right=12mm of csp, yshift=-7mm] (nn) {Neural net\\scorer};
 
-    \node[box, right=12mm of nn, yshift=5mm, fill=orange!10] (llm) {LLM\\explainer};
+    \node[box, right=12mm of nn, yshift=7mm, fill=orange!10] (llm) {LLM\\explainer};
 
     \draw[arrow] (transcript) -- (parser);
     \draw[arrow] (catalog)    -- (sentiment);
@@ -283,9 +283,9 @@ expensive LLM calls in the two places where they are clearly justified.
     \draw[arrow] (prefs)      -- (bayes);
     \draw[arrow] (parser)     -- (csp);
     \draw[arrow] (sentiment)  -- (csp);
-    \draw[arrow] (csp.east)   -| (nn.north);
-    \draw[arrow] (bayes)      -- (nn);
-    \draw[arrow] (nn)         -- (llm);
+    \draw[arrow] (csp.east)   -- (nn.west);
+    \draw[arrow] (bayes.east) -- (nn.west);
+    \draw[arrow] (nn.east)    -- (llm.west);
   \end{tikzpicture}
   \caption{End-to-end pipeline. Gray nodes are data sources; blue nodes are
     deterministic / model components; the orange node is the LLM explainer
