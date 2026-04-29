@@ -247,35 +247,35 @@ ablate any single stage (\eg{} replace the Bayes net with a logistic
 regression baseline) without rewriting upstream code, and it concentrates
 expensive LLM calls in the two places where they are clearly justified.
 
-\begin{figure}[t]
+\begin{figure*}[t]
   \centering
   \begin{tikzpicture}[
-      node distance=4.5mm and 4mm,
+      node distance=5mm and 6mm,
       every node/.style={font=\scriptsize},
       box/.style={
         draw, rounded corners, align=center,
-        minimum width=2.2cm, minimum height=0.7cm,
+        minimum width=2.4cm, minimum height=0.8cm,
         fill=blue!5
       },
       data/.style={
         draw, align=center,
-        minimum width=2.0cm, minimum height=0.55cm,
+        minimum width=2.2cm, minimum height=0.65cm,
         fill=gray!10
       },
-      arrow/.style={-{Stealth[length=1.6mm]}, thick}
+      arrow/.style={-{Stealth[length=1.8mm]}, thick}
     ]
     \node[data] (transcript) {Transcript};
     \node[data, below=of transcript] (catalog) {Catalog\\\& reviews};
     \node[data, below=of catalog] (prefs) {Student\\preferences};
 
-    \node[box, right=8mm of transcript] (parser) {Regex parser\\+ topo. sort};
-    \node[box, right=8mm of catalog] (sentiment) {LLM sentiment\\analysis};
-    \node[box, right=8mm of prefs] (bayes) {Bayes net\\preference model};
+    \node[box, right=10mm of transcript] (parser) {Regex parser\\+ topo. sort};
+    \node[box, right=10mm of catalog] (sentiment) {LLM sentiment\\analysis};
+    \node[box, right=10mm of prefs] (bayes) {Bayes net\\preference model};
 
-    \node[box, right=8mm of sentiment] (csp) {Constraint\\solver (BT)};
-    \node[box, right=8mm of bayes, yshift=8mm] (nn) {Neural net\\scorer};
+    \node[box, right=10mm of sentiment] (csp) {Constraint\\solver (BT)};
+    \node[box, right=10mm of bayes, yshift=10mm] (nn) {Neural net\\scorer};
 
-    \node[box, right=10mm of nn, yshift=4mm, fill=orange!10] (llm) {LLM\\explainer};
+    \node[box, right=12mm of nn, yshift=5mm, fill=orange!10] (llm) {LLM\\explainer};
 
     \draw[arrow] (transcript) -- (parser);
     \draw[arrow] (catalog)    -- (sentiment);
@@ -291,7 +291,7 @@ expensive LLM calls in the two places where they are clearly justified.
     deterministic / model components; the orange node is the LLM explainer
     that closes the loop with the user.}
   \label{fig:pipeline}
-\end{figure}
+\end{figure*}
 
 \subsection{Prerequisite Parsing and Topological Sort}
 
@@ -313,14 +313,21 @@ semester sequences when desired.
 
 For each course section, we collapse all available reviews into a single
 prompt and ask a local Qwen~2.5 7B model to emit a structured JSON object
-with four scalars: \code{difficulty}, \code{workload}, \code{enjoyability},
-and \code{instructor\_efficacy}, each in $[0,1]$. Negative-sentiment phrasing
-(``brutal'', ``unfair'', ``hours of busywork'') maps to high difficulty /
-high workload / low enjoyability; positive phrasing maps the opposite way.
-We chose an LLM over a classical bag-of-words classifier because the
-reviews mix evaluative claims about \emph{the instructor} with claims about
-\emph{the material}, and disambiguating these requires sentence-level
-semantics that simple lexicon methods miss.
+with four scalars in $[0,1]$:
+\begin{itemize}[leftmargin=*,topsep=1pt,itemsep=1pt]
+  \item \code{difficulty} -- conceptual hardness of the material;
+  \item \code{workload} -- time commitment per week;
+  \item \code{enjoyability} -- overall student satisfaction;
+  \item \code{instructor\_efficacy} -- teaching quality of the
+    instructor.
+\end{itemize}
+Negative-sentiment phrasing (``brutal'', ``unfair'', ``hours of busywork'')
+maps to high difficulty, high workload, and low enjoyability; positive
+phrasing maps the opposite way. We chose an LLM over a classical
+bag-of-words classifier because the reviews mix evaluative claims about
+\emph{the instructor} with claims about \emph{the material}, and
+disambiguating these requires sentence-level semantics that simple lexicon
+methods miss.
 
 \subsection{Constraint Solver}
 
