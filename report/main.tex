@@ -287,6 +287,8 @@ expensive LLM calls in the two places where they are clearly justified.
     \draw[arrow] (csp.east)   -- (nn.west);
     \draw[arrow] (bayes.east) -- (nn.west);
     \draw[arrow] (nn.east)    -- (llm.west);
+    \draw[arrow] (transcript.east) -- (bayes.west);
+\draw[arrow] (catalog.east) -- (bayes.west);
   \end{tikzpicture}
   \caption{End-to-end pipeline. Gray nodes are data sources; blue nodes are
     deterministic / model components; the orange node is the LLM explainer
