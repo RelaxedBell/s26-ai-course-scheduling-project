@@ -107,9 +107,8 @@
       sections} and \textbf{1{,}620 reviews} grounded in publicly available
       \emph{TheCourseForum} content, and show that targeted bias correction
       and structured prompt templating substantially improve recommendation
-      quality. Our final pipeline produces a 15-credit, conflict-free
-      schedule with an overall preference score of 68\,\% on representative
-      student profiles.
+      quality. Our final pipeline produces variable-credit, conflict-free
+      schedules for representative student profiles.
     \end{abstract}
     \vspace{1.0em}
   \end{@twocolumnfalse}
@@ -161,7 +160,7 @@ recommendations themselves.
 \end{enumerate}
 
 \paragraph{Summary of results.} The composed pipeline reliably returns
-conflict-free 15-credit schedules in under a few seconds of search, with
+conflict-free variable-credit schedules in under a few seconds of search, with
 neural-network preference scores in the 60--75\,\% range on representative
 student profiles. Adding a CS-class bias term eliminates a degenerate failure
 mode in which CS-major schedules contained too few CS courses, and the
@@ -205,7 +204,7 @@ The scheduler ingests three inputs per student:
 
 \paragraph{(1) Transcript.} Provides the set of courses already completed
 (used to satisfy prerequisites) and the number of remaining semesters
-until graduation. Transcripts are supplied as a CSV upload from the front-end.
+until graduation. Transcripts are supplied as a PDF upload from the front-end.
 
 \paragraph{(2) Course catalog.} We use the UVA Undergraduate Record for the
 B.A.\ in Computer Science (BACS) program~\cite{UVAUndergradRecord} as the
@@ -344,11 +343,9 @@ are encoded directly into the search:
   \item \emph{Prerequisites satisfied.} The DNF clause produced by the
     parser is checked against the student's completed-course set and
     courses already placed earlier in the schedule.
-  \item \emph{User-defined unavailable blocks.} Students can mark times as
-    off-limits (\eg{} a part-time job).
   \item \emph{Credit range.} The total credit count must lie in
-    $[c_{\min}, c_{\max}]$; partial assignments outside this range are
-    pruned.
+    $[c_{\min}, c_{\max}]$; assignments outside this range are
+    discarded.
 \end{itemize}
 Within these hard constraints, the solver enumerates feasible schedules and
 forwards each to the scoring stack. Currently the solver collects
@@ -483,8 +480,8 @@ the model to invent ungrounded claims.
 % ==============================================================================
 
 \paragraph{End-to-end behavior.} On a representative junior-year CS profile
-with a 12--15 credit target, the full pipeline returns a 15-credit,
-conflict-free schedule with a neural-net schedule score of \textbf{0.68}.
+with a 12--15 credit target, the full pipeline returns multiple conflict-free 
+schedules with an average neural-net schedule score of \textbf{0.68}.
 Search-to-first-feasible-schedule is sub-second on commodity hardware, and
 the LLM explainer (running on Rivanna) returns a complete explanation in
 roughly 4--7 seconds.
@@ -492,10 +489,11 @@ roughly 4--7 seconds.
 \paragraph{Effect of the major-affinity term.} Table~\ref{tab:bias}
 summarizes the average composition of recommended schedules for ten
 synthetic CS-major profiles, before and after introducing the
-major-affinity feature. The intervention shifts the CS share from 28\,\%
-to 56\,\% on average without sacrificing schedule scores -- in fact the
+major-affinity feature. The intervention shifts the CS share from 14\,\%
+to 43\,\% on average without sacrificing schedule scores -- in fact the
 mean schedule score improves slightly, because the network had been
-penalizing the unbalanced schedules it was producing.
+penalizing the unbalanced schedules it was producing before the constraint
+solver's runtime cutoff.
 
 \begin{table}[t]
   \centering
@@ -505,10 +503,10 @@ penalizing the unbalanced schedules it was producing.
   \label{tab:bias}
   \begin{tabular}{lccc}
     \toprule
-    & \textbf{CS share} & \textbf{Score} & \textbf{Conflicts} \\
+    & \textbf{CS share} & \textbf{Score} \\
     \midrule
-    No bias term       & 0.28 & 0.61 & 0 \\
-    With bias term     & \textbf{0.56} & \textbf{0.68} & 0 \\
+    No bias term       & 0.14 & 0.61 \\
+    With bias term     & \textbf{0.43} & \textbf{0.68} \\
     \bottomrule
   \end{tabular}
 \end{table}
